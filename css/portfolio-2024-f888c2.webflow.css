@@ -1545,7 +1545,7 @@ img {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Ppmigra, sans-serif;
+  font-family: Ppmigra;
   font-size: 212px;
   font-weight: 400;
   line-height: 212px;
@@ -1660,7 +1660,7 @@ img {
   letter-spacing: -.02em;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Ppmigra, sans-serif;
+  font-family: Ppmigra;
   font-size: 212px;
   font-weight: 400;
   line-height: 212px;
@@ -1714,7 +1714,7 @@ img {
   width: 20vw;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Ppmigra, sans-serif;
+  font-family: Ppmigra;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
@@ -1756,7 +1756,7 @@ img {
   width: 300px;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Ppmigra, sans-serif;
+  font-family: Ppmigra;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -5279,7 +5279,7 @@ img {
   }
 
   .hero-7 {
-    height: 90vh;
+    height: 80vh;
   }
 
   .hero-7.bottom {
@@ -5305,6 +5305,11 @@ img {
     grid-column-gap: 7em;
     grid-row-gap: 7em;
     flex-flow: column;
+  }
+
+  .container.hero {
+    grid-row-gap: 80px;
+    justify-content: center;
   }
 
   .intro-section {
@@ -5507,62 +5512,6 @@ img {
   src: url('../fonts/PPNeueMontreal-Book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ppmigra';
-  src: url('../fonts/PPMigra-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ppmigra';
-  src: url('../fonts/PPMigra-Italic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ppmigra';
-  src: url('../fonts/PPMigra-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ppmigra';
-  src: url('../fonts/PPMigra-Extrabold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ppmigra';
-  src: url('../fonts/PPMigra-ExtralightItalic.otf') format('opentype');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ppmigra';
-  src: url('../fonts/PPMigra-ExtraboldItalic.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ppmigra';
-  src: url('../fonts/PPMigra-Extralight.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ppmigra';
-  src: url('../fonts/PPMigra-BlackItalic.otf') format('opentype');
-  font-weight: 900;
-  font-style: italic;
   font-display: swap;
 }
 @font-face {
