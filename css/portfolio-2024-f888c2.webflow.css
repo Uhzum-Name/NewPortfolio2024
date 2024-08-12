@@ -163,12 +163,8 @@ img {
   width: 91.1851px;
   text-decoration: none;
   display: flex;
-  position: -webkit-sticky;
   position: sticky;
-  top: 0%;
-  bottom: 0%;
-  left: auto;
-  right: 0%;
+  inset: 0% 0% 0% auto;
 }
 
 .text {
@@ -490,15 +486,12 @@ img {
 .bg-spline {
   z-index: 0;
   background-color: #520000;
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  background-image: linear-gradient(#00000080, #00000080);
   width: 100%;
   height: 100vh;
   display: none;
   position: fixed;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .marquee_wrap-2 {
@@ -521,20 +514,14 @@ img {
 }
 
 .logos-gradient {
-  background-image: linear-gradient(to right, #0e0c15, rgba(14, 12, 21, 0));
+  background-image: linear-gradient(to right, #0e0c15, #0e0c1500);
   width: 5rem;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: auto;
+  inset: 0% auto 0% 0%;
 }
 
 .logos-gradient.is-inverted {
-  top: 0%;
-  bottom: 0%;
-  left: auto;
-  right: 0%;
+  inset: 0% 0% 0% auto;
   transform: rotate(180deg);
 }
 
@@ -648,10 +635,7 @@ img {
   opacity: 1;
   display: block;
   position: absolute;
-  top: 0%;
-  bottom: auto;
-  left: 20%;
-  right: auto;
+  inset: 0% auto auto 20%;
 }
 
 .all-services {
@@ -1181,10 +1165,7 @@ img {
   height: auto;
   display: block;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .projects-3 {
@@ -1417,24 +1398,18 @@ img {
   text-decoration: none;
   display: block;
   position: absolute;
-  top: 5%;
-  bottom: 0%;
-  left: auto;
-  right: 10%;
+  inset: 5% 10% 0% auto;
 }
 
 .active-image.active {
   opacity: 1;
   display: block;
   position: absolute;
-  top: 0%;
-  bottom: auto;
-  left: 20%;
-  right: auto;
+  inset: 0% auto auto 20%;
 }
 
 .slider {
-  background-color: rgba(221, 221, 221, 0);
+  background-color: #ddd0;
   flex-flow: column;
   flex: 1;
   justify-content: space-between;
@@ -1455,10 +1430,7 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   display: none;
-  top: auto;
-  bottom: 0%;
-  left: 0%;
-  right: auto;
+  inset: auto auto 0% 0%;
 }
 
 .left-arrow:hover {
@@ -1484,10 +1456,7 @@ img {
   justify-content: flex-end;
   align-items: flex-end;
   display: none;
-  top: auto;
-  bottom: 0%;
-  left: auto;
-  right: 0%;
+  inset: auto 0% 0% auto;
 }
 
 .right-arrow:hover {
@@ -1503,10 +1472,7 @@ img {
   justify-content: center;
   align-items: flex-end;
   display: none;
-  top: auto;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: auto 0% 0%;
 }
 
 .hero-3 {
@@ -1573,10 +1539,7 @@ img {
   text-decoration: none;
   display: flex;
   position: absolute;
-  top: 0%;
-  bottom: auto;
-  left: auto;
-  right: 0%;
+  inset: 0% 0% auto auto;
   transform: rotateX(90deg)rotateY(0)rotateZ(0);
 }
 
@@ -1612,7 +1575,7 @@ img {
 }
 
 .hero-4 {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #0000;
   flex-direction: column;
   flex: 0 auto;
   justify-content: flex-end;
@@ -1692,10 +1655,7 @@ img {
   text-decoration: none;
   display: flex;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: auto;
-  right: 0%;
+  inset: 0% 0% 0% auto;
   overflow: hidden;
   transform: rotate(90deg);
 }
@@ -1733,10 +1693,7 @@ img {
   text-decoration: none;
   display: flex;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 29%;
-  right: auto;
+  inset: 0% auto 0% 29%;
   overflow: hidden;
   transform: rotate(90deg);
 }
@@ -1950,7 +1907,7 @@ img {
   backdrop-filter: blur(7px);
   pointer-events: none;
   cursor: none;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(#fff0, #0000);
   flex: 0 auto;
   justify-content: space-between;
   align-self: auto;
@@ -1961,10 +1918,7 @@ img {
   text-decoration: none;
   display: flex;
   position: fixed;
-  top: auto;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: auto 0% 0%;
 }
 
 .bottomnav.copy {
@@ -2034,10 +1988,7 @@ img {
   text-decoration: none;
   display: flex;
   position: fixed;
-  top: 5%;
-  bottom: auto;
-  left: 0%;
-  right: 0%;
+  inset: 5% 0% auto;
 }
 
 .topnav.copy {
@@ -2077,10 +2028,7 @@ img {
   flex: 0 auto;
   width: 70%;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .image-2 {
@@ -2093,10 +2041,7 @@ img {
   width: 37%;
   height: 70%;
   position: fixed;
-  top: 15%;
-  bottom: 0%;
-  left: 32%;
-  right: 0%;
+  inset: 15% 0% 0% 32%;
 }
 
 .div-block-10 {
@@ -2994,7 +2939,7 @@ img {
 }
 
 .style-guide-info-text {
-  color: rgba(0, 0, 0, .3);
+  color: #0000004d;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -3091,7 +3036,7 @@ img {
 }
 
 .style-guide-heading {
-  color: rgba(0, 0, 0, .8);
+  color: #000c;
   letter-spacing: -.02em;
   width: 100%;
   max-width: 340px;
@@ -3223,7 +3168,7 @@ img {
   flex: 0 auto;
   justify-content: flex-start;
   align-items: center;
-  padding: 4px 8px 6px;
+  padding: 8px;
   text-decoration: none;
   display: inline-flex;
 }
@@ -3265,8 +3210,7 @@ img {
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr;
   grid-auto-columns: 1fr;
-  align-content: start;
-  justify-content: space-between;
+  place-content: start space-between;
   align-items: stretch;
   padding: 8em 2em;
   font-size: 14px;
@@ -3354,8 +3298,7 @@ img {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr;
   grid-auto-columns: 1fr;
-  align-items: center;
-  justify-items: center;
+  place-items: center;
   display: grid;
 }
 
@@ -3387,8 +3330,7 @@ img {
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
   justify-content: center;
-  align-items: center;
-  justify-items: center;
+  place-items: center;
   width: 100%;
   text-decoration: none;
   display: block;
@@ -3768,6 +3710,11 @@ img {
   line-height: 1;
 }
 
+.list-item {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
 .logos-container2 {
   width: 100%;
   display: flex;
@@ -3806,8 +3753,7 @@ img {
   grid-template-rows: auto;
   grid-template-columns: 1fr;
   grid-auto-columns: 1fr;
-  align-content: start;
-  justify-content: space-between;
+  place-content: start space-between;
   align-items: stretch;
   padding: 8em 2em;
   font-size: 14px;
@@ -3891,10 +3837,7 @@ img {
   }
 
   .bg-spline {
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+    inset: 0%;
   }
 
   .marquee_wrap-2 {
@@ -4070,10 +4013,7 @@ img {
     align-items: flex-start;
     width: 100vh;
     max-height: 100vh;
-    top: 0%;
-    bottom: 0%;
-    left: -10%;
-    right: 0%;
+    inset: 0% 0% 0% -10%;
   }
 
   .text-27 {
@@ -4430,8 +4370,7 @@ img {
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
     justify-content: center;
-    align-items: center;
-    justify-items: stretch;
+    place-items: center stretch;
     width: 100vw;
     padding-left: 40px;
     padding-right: 40px;
@@ -4612,10 +4551,7 @@ img {
   .frame-61 {
     grid-column-gap: 18%;
     grid-row-gap: 18%;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: auto;
+    inset: 0% auto 0% 0%;
   }
 
   .div-block-3 {
@@ -4808,6 +4744,7 @@ img {
   }
 
   .list-item {
+    font-size: .9rem;
     list-style-type: disc;
   }
 }
@@ -4953,8 +4890,7 @@ img {
 
   .frame-17 {
     grid-template-columns: 1fr;
-    align-items: end;
-    justify-items: start;
+    place-items: end start;
     padding-left: 0;
     padding-right: 0;
   }
@@ -4987,10 +4923,7 @@ img {
   .frame-61 {
     grid-column-gap: 7%;
     grid-row-gap: 7%;
-    top: 0%;
-    bottom: 0%;
-    left: -108%;
-    right: 0%;
+    inset: 0% 0% 0% -108%;
   }
 
   .text-27 {
@@ -5089,8 +5022,7 @@ img {
     grid-template-columns: 1fr 1.5fr;
     grid-auto-columns: 1fr;
     justify-content: flex-start;
-    align-items: flex-start;
-    justify-items: start;
+    place-items: flex-start start;
     display: grid;
   }
 
@@ -5325,8 +5257,7 @@ img {
     grid-row-gap: 1em;
     flex: none;
     grid-auto-flow: row;
-    align-items: center;
-    justify-items: start;
+    place-items: center start;
     height: auto;
   }
 
@@ -5418,6 +5349,11 @@ img {
 
   .navbar-label {
     font-size: .9rem;
+  }
+
+  .list-item {
+    font-size: 1.1rem;
+    line-height: 1.4;
   }
 
   .container-projects {
