@@ -1021,7 +1021,7 @@ img {
 
 .testimonial-item-name {
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr .25fr;
   grid-auto-columns: 1fr;
   justify-content: space-between;
   align-items: flex-end;
