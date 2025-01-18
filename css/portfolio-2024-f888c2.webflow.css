@@ -4656,7 +4656,16 @@ img {
     max-width: 80%;
   }
 
-  .projects-4, .section {
+  .projects-4 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .body-2 {
+    height: auto;
+  }
+
+  .section {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -4671,6 +4680,7 @@ img {
   }
 
   .next-project {
+    height: auto;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -5143,16 +5153,33 @@ img {
     padding-bottom: 4em;
   }
 
+  .body-2 {
+    height: auto;
+  }
+
   .qtr {
     align-items: flex-start;
     width: 72%;
     min-width: 50%;
   }
 
+  .section {
+    height: auto;
+    overflow: visible;
+  }
+
+  .collection-list-wrapper {
+    height: auto;
+  }
+
   .image-3 {
     aspect-ratio: auto;
     object-fit: fill;
     display: block;
+  }
+
+  .next-project {
+    height: 170vw;
   }
 
   .halfdiv-nextproject {
