@@ -3343,7 +3343,7 @@ img {
   place-items: center;
   width: 100%;
   text-decoration: none;
-  display: block;
+  display: none;
   overflow: hidden;
 }
 
