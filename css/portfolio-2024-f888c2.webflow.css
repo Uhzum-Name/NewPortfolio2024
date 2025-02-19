@@ -2751,6 +2751,11 @@ img {
   display: none;
 }
 
+.project-image.home.on {
+  object-fit: cover;
+  display: block;
+}
+
 .topnav-project {
   z-index: 999;
   mix-blend-mode: difference;
