@@ -4208,6 +4208,17 @@ img {
   display: flex;
 }
 
+.list-item-3 {
+  list-style-type: decimal;
+}
+
+.list-4 {
+  overflow-wrap: normal;
+  padding-left: 20px;
+  text-decoration: none;
+  list-style-type: decimal;
+}
+
 @media screen and (max-width: 991px) {
   .marquee_wrap {
     width: 400vw;
