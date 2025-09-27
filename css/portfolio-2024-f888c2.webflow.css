@@ -1165,7 +1165,11 @@ img {
 }
 
 .halftag-halfdiv.bottom {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  flex-flow: column;
   justify-content: space-between;
+  max-width: 50%;
 }
 
 .heading-13 {
@@ -1195,6 +1199,11 @@ img {
   justify-content: space-between;
   width: 70%;
   min-width: 70%;
+}
+
+.halfdiv.next, .halfdiv.quote {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text-13 {
@@ -2913,7 +2922,7 @@ img {
   background-color: #000;
   flex-flow: column;
   justify-content: space-between;
-  max-width: 1440px;
+  max-width: none;
   display: flex;
 }
 
@@ -3886,7 +3895,7 @@ img {
   object-fit: cover;
   border-radius: 10px;
   width: 100%;
-  height: 80vh;
+  height: 80%;
 }
 
 .code-embed {
@@ -3913,12 +3922,15 @@ img {
 }
 
 .halfdiv-next {
+  flex-flow: column;
   flex: 0 auto;
   justify-content: flex-end;
   align-items: flex-start;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   text-decoration: none;
-  display: flex;
+  display: block;
 }
 
 .list {
@@ -4217,6 +4229,159 @@ img {
   padding-left: 20px;
   text-decoration: none;
   list-style-type: decimal;
+}
+
+@media screen and (min-width: 1280px) {
+  .halftag-halfdiv {
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .halftag-halfdiv.bottom {
+    max-width: 40%;
+  }
+
+  .halfdiv {
+    width: 100%;
+  }
+
+  .halfdiv.next {
+    align-items: center;
+  }
+
+  .halfdiv.quote {
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-6 {
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .body-2 {
+    max-width: none;
+  }
+
+  .project-content {
+    max-width: 100%;
+  }
+
+  .image-3 {
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vid {
+    height: 60vh;
+    display: block;
+    overflow: visible;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .body-2 {
+    align-items: center;
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .halftag-halfdiv {
+    flex-flow: column;
+    justify-content: center;
+    max-width: 30%;
+  }
+
+  .halftag-halfdiv.bottom {
+    max-width: 30%;
+  }
+
+  .halfdiv {
+    width: 100%;
+  }
+
+  .halfdiv.next {
+    align-items: center;
+  }
+
+  .halfdiv.quote {
+    width: 40%;
+    max-width: 30%;
+  }
+
+  .bottomnav {
+    width: 30%;
+  }
+
+  .hero-6 {
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .projects-4 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .body-2 {
+    max-width: 100%;
+  }
+
+  .section {
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .collection-list-wrapper {
+    align-items: center;
+  }
+
+  .project-content {
+    max-width: 100%;
+  }
+
+  .image-3 {
+    max-width: 70vw;
+  }
+
+  .next-project {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .halfdiv-next {
+    justify-content: center;
+  }
+
+  .vid {
+    width: 70%;
+    height: 70em;
+  }
+
+  .fulldiv {
+    align-items: center;
+  }
+
+  .fulldiv.tri-grid {
+    justify-items: center;
+  }
 }
 
 @media screen and (max-width: 991px) {
