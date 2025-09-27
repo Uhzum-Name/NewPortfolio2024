@@ -4233,7 +4233,7 @@ img {
 
 @media screen and (min-width: 1280px) {
   .halftag-halfdiv {
-    max-width: 40%;
+    max-width: 45vw;
     margin-left: auto;
     margin-right: auto;
   }
@@ -4251,9 +4251,13 @@ img {
   }
 
   .halfdiv.quote {
-    max-width: 40%;
+    max-width: 45%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .bottomnav {
+    width: 45vw;
   }
 
   .hero-6 {
@@ -4262,6 +4266,10 @@ img {
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .projects-4 {
+    align-items: stretch;
   }
 
   .body-2 {
@@ -4286,6 +4294,14 @@ img {
 }
 
 @media screen and (min-width: 1440px) {
+  .halftag-halfdiv {
+    max-width: 45vw;
+  }
+
+  .bottomnav {
+    width: 45%;
+  }
+
   .body-2 {
     align-items: center;
     max-width: none;
@@ -4366,6 +4382,26 @@ img {
     padding-right: 0;
   }
 
+  .hero-grid {
+    align-items: stretch;
+    width: 100vw;
+    max-width: 30%;
+  }
+
+  .hero-grid.top {
+    width: auto;
+    max-width: 30%;
+  }
+
+  .container.hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-2 {
+    width: 30%;
+  }
+
   .halfdiv-next {
     justify-content: center;
   }
@@ -4373,6 +4409,10 @@ img {
   .vid {
     width: 70%;
     height: 70em;
+  }
+
+  .vid.homevid {
+    width: 100%;
   }
 
   .fulldiv {
