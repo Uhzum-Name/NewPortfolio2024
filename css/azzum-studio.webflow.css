@@ -4005,6 +4005,7 @@ img {
 
 .navbar-label.time {
   opacity: 1;
+  display: none;
 }
 
 .navbar-label.time:hover {
@@ -4062,7 +4063,7 @@ img {
 }
 
 .project-link.adt {
-  display: none;
+  display: block;
 }
 
 .project-link.off {
