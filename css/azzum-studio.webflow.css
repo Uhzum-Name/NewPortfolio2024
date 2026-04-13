@@ -4242,7 +4242,9 @@ img {
   aspect-ratio: 1;
   object-fit: cover;
   width: 45%;
+  max-width: 44.9996%;
   height: 37%;
+  max-height: 39.8869%;
   margin-top: 2em;
 }
 
