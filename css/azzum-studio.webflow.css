@@ -2098,13 +2098,13 @@ img {
 }
 
 .text-29 {
-  direction: ltr;
   color: #fff;
   text-align: center;
   letter-spacing: -.02em;
   text-transform: uppercase;
   word-break: normal;
   overflow-wrap: normal;
+  direction: ltr;
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppneueworld Condensed, sans-serif;
@@ -3170,7 +3170,7 @@ img {
   background-color: #000;
   align-items: stretch;
   width: 100vw;
-  display: none;
+  display: block;
   position: absolute;
 }
 
@@ -3340,7 +3340,7 @@ img {
 }
 
 .extras {
-  display: none;
+  display: block;
 }
 
 .hero-7 {
@@ -3525,6 +3525,10 @@ img {
   display: flex;
 }
 
+.container.experiences.about-me {
+  padding-top: 0;
+}
+
 .intro-section {
   color: #fff;
   flex-direction: column;
@@ -3623,7 +3627,7 @@ img {
   place-items: center;
   width: 100%;
   text-decoration: none;
-  display: none;
+  display: block;
   overflow: hidden;
 }
 
@@ -4232,6 +4236,14 @@ img {
   padding-left: 20px;
   text-decoration: none;
   list-style-type: decimal;
+}
+
+.aboutmeimage {
+  aspect-ratio: 1;
+  object-fit: cover;
+  width: 45%;
+  height: 37%;
+  margin-top: 2em;
 }
 
 @media screen and (min-width: 1280px) {
@@ -6021,6 +6033,10 @@ img {
     margin-bottom: 25%;
   }
 
+  .hero-7.btm.abt {
+    height: auto;
+  }
+
   .hero-grid {
     grid-column-gap: 1em;
     grid-row-gap: 1em;
@@ -6051,6 +6067,10 @@ img {
   .container.experiences {
     grid-row-gap: 80px;
     justify-content: center;
+    margin-bottom: 3em;
+  }
+
+  .container.experiences.about-me {
     margin-bottom: 4em;
   }
 
@@ -6263,10 +6283,6 @@ img {
 #w-node-_8f9af864-19f6-6f90-fa8f-61487621ef25-299bdac1 {
   grid-area: span 1 / span 2 / span 1 / span 2;
   justify-self: end;
-}
-
-#w-node-e95270e1-8652-c6e9-0643-5e651884332f-299bdac1 {
-  justify-self: auto;
 }
 
 
