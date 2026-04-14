@@ -3389,6 +3389,11 @@ img {
   display: flex;
 }
 
+.hero-grid.top {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+}
+
 .frame-95 {
   flex-flow: row;
   justify-content: space-between;
@@ -4014,6 +4019,13 @@ img {
 
 .navbar-label.time:hover {
   opacity: 100;
+}
+
+.navbar-label.home {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 40px;
+  margin-top: 20px;
 }
 
 .label-final-copy {
