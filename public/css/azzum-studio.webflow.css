@@ -6555,3 +6555,16 @@ img {
   width: 100%;
   max-width: 100%;
 }
+
+/* At >=1920px, .section itself drops its side padding (see the generated
+   rule above) so .collection-list-wrapper runs edge-to-edge with zero
+   margin - unlike .hero-6 and .vid, which keep breathing room at this size
+   via their own max-width: 70vw. Give body images that same treatment
+   instead of stretching flush to the browser edges. */
+@media screen and (min-width: 1920px) {
+  .collection-list-wrapper .image-3 {
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
