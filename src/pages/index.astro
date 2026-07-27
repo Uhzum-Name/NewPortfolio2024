@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const projects = allProjects.sort((a, b) => a.data.order - b.data.order);
+
+const logos = [
+  { src: '/images/Sony-logo-white-1.svg', height: 30 },
+  { src: '/images/logo-nestle-1.svg' },
+  { src: '/images/DS-1.svg', height: 20 },
+  { src: '/images/Asset-1-3.svg', height: 30 },
+  { src: '/images/Group.svg', height: 25 },
+  { src: '/images/image-20.svg', height: 70 },
+  { src: '/images/Nespresso-wordmark-logo-1.svg', height: 30 },
+  { src: '/images/Group-79.svg', height: 40 },
+  { src: '/images/Orion-Logo.svg', height: 30 },
+  { src: '/images/image-21.svg', height: 60 },
+  { src: '/images/affinitysolutions.svg', height: 30 },
+  { src: '/images/still-here-1.svg', height: 40 },
+];
+---
+
+<Layout
+  title="Azzum Naeem | Senior Designer"
+  description="Portfolio of Azzum Naeem, a senior web and marketing designer for agencies and startups."
+  bodyClass="body"
+  isHome={true}
+>
+  <section class="hero-7">
+    <div class="container hero">
+      <div class="hero-grid top">
+        <div class="h5-regular">Design partner for marketing and brand teams</div>
+        <div class="body-regular"><span class="label-final">Built for Fortune 500 brands. Trusted by a16z-backed startups.</span><br /></div>
+        <div class="body-regular">Senior designer with 7+ years across agencies, startups and Fortune 500 clients. I help you ship standout web, UI and marketing work, fast, and consistently.<br /></div>
+        <a href="https://calendly.com/auz-naeem/introduction-meeting" target="_blank" rel="noopener" class="navbar-label home w-button">Book a call ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <div class="section-2">
+      <div class="label-final">Trusted by businesses like:<br /></div>
+    </div>
+    <div class="logos-container2">
+      {[1, 2, 3].map(() => (
+        <div class="logos-row2">
+          {logos.map((logo) => (
+            <img loading="eager" src={logo.src} alt="" height={logo.height} class="logo-5" />
+          ))}
+        </div>
+      ))}
+      <div class="logos-gradient"></div>
+      <div class="logos-gradient is-inverted"></div>
+    </div>
+  </section>
+
+  <section id="work" class="section-2">
+    <div class="container-projects">
+      <div class="div-block-19">
+        <h1 class="h6-regular">Featured case studies<span class="label-final">[0{projects.length}]</span></h1>
+        <div class="w-layout-grid collection-list-2">
+          {projects.map((project) => (
+            <a
+              href={`/${project.slug}.html`}
+              class="project-link w-inline-block"
+              id={project.slug === 'paymaster' ? 'w-node-d075961b-f955-74f9-366b-ced34e295fe3-299bdac1' : undefined}
+            >
+              {project.data.homeMedia.type === 'image' ? (
+                <img
+                  src={project.data.homeMedia.src}
+                  srcset={project.data.homeMedia.srcset}
+                  sizes="(max-width: 479px) 48vw, (max-width: 1439px) 49vw, 50vw"
+                  loading="lazy"
+                  alt=""
+                  class="project-image home on"
+                />
+              ) : (
+                <div
+                  data-poster-url={project.data.homeMedia.poster}
+                  data-video-urls={`${project.data.homeMedia.mp4},${project.data.homeMedia.webm}`}
+                  data-autoplay="true"
+                  data-loop="true"
+                  class="vid homevid w-background-video w-background-video-atom"
+                >
+                  <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    style={`background-image:url("${project.data.homeMedia.poster}")`}
+                    data-object-fit="cover"
+                  >
+                    <source src={project.data.homeMedia.mp4} />
+                    <source src={project.data.homeMedia.webm} />
+                  </video>
+                </div>
+              )}
+              <p class="label-final">{project.data.homeLabel}</p>
+              <p class="body-large">{project.data.homeDescription}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-7 btm">
+    <div class="container experiences">
+      <div data-reveal="blur" class="hero-grid">
+        <h1 class="h6-regular">Capabilities</h1>
+        <div class="div-block-23 capabilities">
+          <div id="w-node-_8f69764c-dfda-a8f3-e40b-7a2f0212d666-299bdac1" class="div-block-25">
+            <div class="div-block-24 capablilites">
+              <div class="label-final">Web</div>
+              <div class="body-large">- Brand-led websites<br />- Landing pages<br />- Webflow builds<br />- Web platforms</div>
+            </div>
+            <div class="div-block-24 capablilites">
+              <div class="label-final">Product and UI</div>
+              <div class="body-large">- Product and app UI<br />- Prototyping<br />- MVP design<br />- User research</div>
+            </div>
+          </div>
+          <div id="w-node-_0140caab-86c1-1313-205b-8166bf6fd279-299bdac1" class="div-block-25">
+            <div class="div-block-24 capablilites">
+              <div class="label-final">Brand</div>
+              <div class="body-large">- Identity design<br />- Guidelines and visual systems<br />- Style guides<br />- Art direction</div>
+            </div>
+            <div class="div-block-24 capablilites">
+              <div class="label-final">Systems and workflow</div>
+              <div class="body-large">- Design systems<br />- Component libraries<br />- AI-integrated process<br />- Dev-ready handoff</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="blur" class="hero-grid">
+        <h1 class="h6-regular">Testimonials</h1>
+        <div class="div-block-23">
+          <div id="w-node-f3d98483-4422-a452-5967-850f3297da75-299bdac1" class="div-block-24">
+            <div id="w-node-f3d98483-4422-a452-5967-850f3297da76-299bdac1" class="label-final">tyler reilly - project manager | Fifty thousand feet<br /></div>
+            <div id="w-node-f3d98483-4422-a452-5967-850f3297da79-299bdac1" class="body-large">&quot;My agency needed a Ul/UX designer on a tight turnaround. Azzum accepted this assignment from us and was invaluable in helping to fulfill our client&#x27;s request. He was able to learn a new brand system extremely quickly, and successfully collaborated with our creative team.<br />‍<br />As a project manager, I was also appreciative of his responsiveness and high level of engagement on the work - it&#x27;s fantastic when freelance designers take a real stake in the project&#x27;s success, and Azzum was highly invested from start to finish. I&#x27;d highly recommend him for his talent, work ethic, and demeanor that he brings to a team!&quot;</div>
+          </div>
+        </div>
+        <div class="div-block-23">
+          <div id="w-node-f3d98483-4422-a452-5967-850f3297da80-299bdac1" class="div-block-24">
+            <div id="w-node-f3d98483-4422-a452-5967-850f3297da81-299bdac1" class="label-final">Michael finn - Account director | 20nine<br /></div>
+            <div id="w-node-f3d98483-4422-a452-5967-850f3297da84-299bdac1" class="body-large">&quot;Azzum is one of the most talented and well-rounded UX designers I&#x27;ve had the privilege of working with. What sets him apart is his wide-ranging design experience, which allows him to tackle a diverse array of design challenges with confidence. Whether it was building intuitive user interfaces or creating visually stunning graphic elements, Azzum consistently delivered outstanding results.&quot;</div>
+          </div>
+        </div>
+        <div class="div-block-23">
+          <div id="w-node-f3d98483-4422-a452-5967-850f3297da87-299bdac1" class="div-block-24">
+            <div id="w-node-f3d98483-4422-a452-5967-850f3297da88-299bdac1" class="label-final">tim cook - creative director | Bear in the hall<br /></div>
+            <div id="w-node-f3d98483-4422-a452-5967-850f3297da8b-299bdac1" class="body-large">&quot;We selected him from a large pool of candidates, chosen for his talented design skills, strategic abilities and his collaborative personality. He was a great addition to our tight group and added to the creative vibe of our agency.&quot;<br /></div>
+          </div>
+        </div>
+        <div class="div-block-23">
+          <div id="w-node-f3d98483-4422-a452-5967-850f3297da8f-299bdac1" class="div-block-24">
+            <div id="w-node-f3d98483-4422-a452-5967-850f3297da90-299bdac1" class="label-final">roy naquin — founder &amp; principal | stratogen labs<br /></div>
+            <div id="w-node-f3d98483-4422-a452-5967-850f3297da93-299bdac1" class="body-large">“Before i worked with Azzum, i struggled to find a practical answer to the various directions i want to take my personal brand and business. A single workshop with Azzum solidified my vision for my brand, bringing my ideas into reality with strategic direction and executive clarity.”<br /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-7 btm recentexp">
+    <div class="container experiences">
+      <div data-reveal="blur" class="hero-grid">
+        <h1 class="h6-regular">Recent Experiences<span class="label-final">[marketing/product/web]</span></h1>
+        <div class="div-block-23">
+          <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e776-299bdac1" class="div-block-24">
+            <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e777-299bdac1" class="label-final">senior Designer - web &amp; UI/ux<br /></div>
+            <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e77a-299bdac1" class="body-large experience">50,000feet<br /></div>
+          </div>
+          <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e77d-299bdac1" class="body-large experience">2024 - present<br /></div>
+        </div>
+        <div class="div-block-23">
+          <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e781-299bdac1" class="div-block-24">
+            <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e782-299bdac1" class="label-final">senior Designer - web &amp; marketing<br /></div>
+            <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e785-299bdac1" class="body-large experience">perform search<br /></div>
+          </div>
+          <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e788-299bdac1" class="body-large experience">2025<br /></div>
+        </div>
+        <div class="div-block-23">
+          <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e78c-299bdac1" class="div-block-24">
+            <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e78d-299bdac1" class="label-final">Product Designer — mobile app<br /></div>
+            <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e790-299bdac1" class="body-large experience">Coverd<br /></div>
+          </div>
+          <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e793-299bdac1" class="body-large experience">2024 - 2025<br /></div>
+        </div>
+        <div class="div-block-23">
+          <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e797-299bdac1" class="div-block-24">
+            <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e798-299bdac1" class="label-final">Product Designer — web app<br /></div>
+            <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e79b-299bdac1" class="body-large experience">fläsh<br /></div>
+          </div>
+          <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e79e-299bdac1" class="body-large experience">2024 - 2025<br /></div>
+        </div>
+        <div class="div-block-23">
+          <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e7a2-299bdac1" class="div-block-24">
+            <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e7a3-299bdac1" class="label-final">Senior Designer - web &amp; marketing<br /></div>
+            <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e7a6-299bdac1" class="body-large experience">20nine<br /></div>
+          </div>
+          <div id="w-node-d4677139-3ce7-1adb-ff17-e1460652e7a9-299bdac1" class="body-large experience">2023 - 2024<br /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-7 btm abt">
+    <div class="container experiences about-me">
+      <div data-reveal="blur" class="hero-grid">
+        <h1 class="h6-regular">About Me<span class="label-final">[surfer/writer/traveler]</span></h1>
+        <div class="body-regular">I&#x27;ve built websites, brands, and apps for global brands, creative consultancies, and startups. My work has had measurable impact across engagement, conversion, and product performance, including ventures that have gone on to raise serious funding ($7.8M).<br /><br />AI tools are part of the workflow. Midjourney, Figma AI, Claude, Cursor. <br /><br />Faster iterations, more value for your budget.</div>
+        <img src="/images/mebw.png" loading="lazy" sizes="100vw" srcset="/images/mebw-p-500.png 500w, /images/mebw-p-800.png 800w, /images/mebw-p-1080.png 1080w, /images/mebw.png 1600w" alt="" class="aboutmeimage" />
+      </div>
+    </div>
+  </section>
+</Layout>
