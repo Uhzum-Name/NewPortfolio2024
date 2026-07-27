@@ -6544,3 +6544,14 @@ img {
   font-style: normal;
   font-display: swap;
 }
+
+/* Case-study body images: Webflow's original rules let some of these
+   (the ones with a small `sizes` hint, or any image at >=1280px viewports)
+   sit at their intrinsic/capped size instead of filling the content column,
+   inconsistent with the surrounding text. Force every image in the body to
+   fill its column at every breakpoint, regardless of wrapper (.fulldiv,
+   .fulldiv.tri-grid, or a bare child of .collection-list-wrapper). */
+.collection-list-wrapper .image-3 {
+  width: 100%;
+  max-width: 100%;
+}
