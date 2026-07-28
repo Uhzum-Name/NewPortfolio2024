@@ -8,6 +8,7 @@ services: |
 heroImage: "/images/ipad-thumb.png"
 heroImageAlt: ""
 overview: |
+  <p class="h6-regular">Project Overview</p>
   Orion Wealthtech, a forward-thinking wealth management technology firm, had a disconnect between their innovative product offerings and the way they were represented online. Their existing website lacked clarity, cohesion, and modern usability—failing to reflect the sophistication of the technology and services they provided. For a brand at the intersection of finance and innovation, this posed a challenge: how do you build trust while presenting complex solutions in a simple, engaging way?
 overviewReveal: false
 nextProjectSlug: "paymaster"

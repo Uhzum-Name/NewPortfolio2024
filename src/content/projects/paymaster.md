@@ -8,6 +8,7 @@ services: |
 heroImage: "/images/main-image.png"
 heroImageAlt: ""
 overview: |
+  <p class="h6-regular">Project Overview</p>
   <p><em>*To respect client confidentiality and non-disclosure, certain features, names, and details have been modified and/or omitted from this case study.*</em></p>
   <p>Paymaster is a fintech app designed for a new generation of users carrying the weight of credit card debt. The brief was to reimagine repayment not as a burden but as an engaging, rewarding habit. Working with a fintech startup client, we were tasked with designing the end-to-end user experience: conducting discovery research, defining the product strategy, mapping behavior loops, creating low-fidelity wireframes, designing a modular UI system, and delivering production-ready files to developers for a TestFlight beta release.</p>
   <p>The result was an app that turned debt repayment into a motivational loop of small challenges, instant feedback, and tangible rewards.</p>

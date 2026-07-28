@@ -8,6 +8,7 @@ services: |
 heroImage: "/images/home.png"
 heroImageAlt: ""
 overview: |
+  <p class="h6-regular">Project Overview</p>
   Fläsh, a global B2B supplier of professional teeth whitening products, wanted to support their dental partners with a powerful marketing and engagement tool. Their vision was to create a branded, browser-based app that allowed patients to simulate whitening results using augmented reality, then share those results online to encourage word-of-mouth referrals.
 overviewReveal: true
 externalLink: "https://www.flaeshapp.com/full"
