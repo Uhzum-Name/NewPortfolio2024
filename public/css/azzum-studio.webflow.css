@@ -6568,3 +6568,28 @@ img {
     margin-right: auto;
   }
 }
+
+/* "Trusted by" logo marquee: the three .logos-row2 copies in index.astro
+   were authored for an infinite horizontal scroll, but that scroll was
+   driven entirely by Webflow's interactions engine (webflow.js), which we
+   dropped. Since the three rows are identical and sit side by side, each
+   one scrolling left by exactly its own width, in sync, produces a
+   seamless loop. */
+.logos-row2 {
+  animation: logo-marquee 32s linear infinite;
+}
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logos-row2 {
+    animation: none;
+  }
+}
