@@ -18,7 +18,7 @@ const p = entry.data;
         <a href="/" class="label-final">back to home</a>
       </div>
     </div>
-    <img class="main-project-image" src={p.heroImage} alt={p.heroImageAlt} sizes="(max-width: 1919px) 100vw, 1920px" loading="lazy" />
+    <img class="main-project-image" src={p.heroImage} alt={p.heroImageAlt} sizes="(max-width: 1919px) 100vw, 1920px" loading="lazy" data-reveal="blur" />
   </section>
 
   <section class="projects-4">
@@ -67,7 +67,7 @@ const p = entry.data;
     <div class="halfdiv-next">
       <div class="halfdiv next">
         <a href={`/${p.nextProjectSlug}.html`} class="next-project-link nextimage w-inline-block">
-          <img class="image-3" src={p.nextProjectImage} alt="" sizes="(max-width: 1919px) 100vw, 1920px" loading="lazy" />
+          <img class="image-3" src={p.nextProjectImage} alt="" sizes="(max-width: 1919px) 100vw, 1920px" loading="lazy" data-reveal="blur" />
         </a>
       </div>
     </div>
