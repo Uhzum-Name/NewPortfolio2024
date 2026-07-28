@@ -76,12 +76,44 @@
 
     // 3. Scroll-into-view fade/blur reveal
     var revealEls = document.querySelectorAll('[data-reveal]');
+    // For <img> elements, wait for the image itself to finish loading before
+    // revealing it - otherwise the blur-to-clear transition can finish
+    // playing while the image is still downloading/decoding, leaving a
+    // blank flash mid-transition instead of a smooth reveal.
+    function revealWhenReady(el) {
+      if (el.tagName !== 'IMG') {
+        el.classList.add('is-visible');
+        return;
+      }
+      // decode() resolves once the bitmap is actually decoded and ready to
+      // paint - complete/'load' alone can fire before that for large images
+      // decoded off the main thread, leaving a blank flash mid-transition.
+      if (el.decode) {
+        el.decode().then(
+          function () {
+            el.classList.add('is-visible');
+          },
+          function () {
+            el.classList.add('is-visible');
+          }
+        );
+      } else if (el.complete) {
+        el.classList.add('is-visible');
+      } else {
+        el.addEventListener('load', function () {
+          el.classList.add('is-visible');
+        });
+        el.addEventListener('error', function () {
+          el.classList.add('is-visible');
+        });
+      }
+    }
     if ('IntersectionObserver' in window && revealEls.length) {
       var observer = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
+              revealWhenReady(entry.target);
               observer.unobserve(entry.target);
             }
           });
@@ -92,9 +124,7 @@
         observer.observe(el);
       });
     } else {
-      revealEls.forEach(function (el) {
-        el.classList.add('is-visible');
-      });
+      revealEls.forEach(revealWhenReady);
     }
 
     // 4. NYC clock (kept for parity; .timezone is display:none in CSS today)
