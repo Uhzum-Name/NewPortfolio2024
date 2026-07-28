@@ -61,6 +61,13 @@
 
       document.querySelectorAll('[data-typewriter]').forEach(function (el) {
         var chars = el.querySelectorAll('.char');
+        // Cap the total reveal time regardless of text length: a 0.02s/char
+        // stagger reads as a snappy typewriter for a short label, but takes
+        // 12+ seconds to finish on a long testimonial paragraph. Short text
+        // still gets the full 0.02s/char cascade; long text compresses the
+        // stagger so the whole thing finishes within ~0.8s.
+        var maxTotalDuration = 0.8;
+        var perChar = chars.length ? Math.min(0.02, maxTotalDuration / chars.length) : 0.02;
         var tl = gsap.timeline({
           scrollTrigger: {
             trigger: el,
@@ -70,7 +77,7 @@
           },
         });
         tl.set(el, { visibility: 'visible' });
-        tl.from(chars, { opacity: 0, duration: 0.02, ease: 'none', stagger: { each: 0.02 } });
+        tl.from(chars, { opacity: 0, duration: 0.02, ease: 'none', stagger: { each: perChar } });
       });
     }
 
