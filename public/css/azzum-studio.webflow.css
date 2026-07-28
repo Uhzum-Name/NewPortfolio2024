@@ -210,6 +210,16 @@
   --white: white;
   --black: black;
   --ui-bg: #3d3d3d99;
+
+  /* Case-study vertical rhythm. The Webflow export's own values already
+     formed a coherent scale (48px within a content block, exactly 2x that
+     - 96px - between blocks); named here so it stays that way instead of
+     drifting into more one-off magic numbers. */
+  --space-2xs: 10px;
+  --space-sm: 40px;
+  --space-md: 48px;
+  --space-lg: 80px;
+  --space-xl: 96px;
 }
 
 .w-layout-grid {
@@ -1165,8 +1175,8 @@ img {
 }
 
 .halftag-halfdiv.bottom {
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: var(--space-2xs);
+  grid-row-gap: var(--space-2xs);
   flex-flow: column;
   justify-content: space-between;
   max-width: 50%;
@@ -2828,13 +2838,13 @@ img {
 }
 
 .projects-4 {
-  grid-row-gap: 80px;
+  grid-row-gap: var(--space-lg);
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
   text-decoration: none;
   display: flex;
   position: relative;
@@ -2937,8 +2947,8 @@ img {
 .section {
   flex-flow: column;
   align-items: flex-end;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
   display: flex;
   position: relative;
   overflow: hidden;
@@ -2949,8 +2959,8 @@ img {
 }
 
 .collection-list-wrapper {
-  grid-column-gap: 6em;
-  grid-row-gap: 6em;
+  grid-column-gap: var(--space-xl);
+  grid-row-gap: var(--space-xl);
   flex-flow: column;
   justify-content: space-between;
   align-items: stretch;
@@ -3027,21 +3037,19 @@ img {
 }
 
 .next-project {
-  grid-row-gap: 80px;
+  grid-row-gap: var(--space-lg);
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding: var(--space-lg);
   text-decoration: none;
   display: flex;
   position: relative;
 }
 
 .halfdiv-nextproject {
-  grid-row-gap: 40px;
+  grid-row-gap: var(--space-sm);
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -4164,8 +4172,8 @@ img {
 }
 
 .fulldiv {
-  grid-column-gap: 3em;
-  grid-row-gap: 3em;
+  grid-column-gap: var(--space-md);
+  grid-row-gap: var(--space-md);
   flex-flow: column;
   flex: 0 auto;
   justify-content: space-between;
@@ -4176,8 +4184,8 @@ img {
 }
 
 .fulldiv.tri-grid {
-  grid-column-gap: 3em;
-  grid-row-gap: 3em;
+  grid-column-gap: var(--space-md);
+  grid-row-gap: var(--space-md);
   grid-template-rows: auto;
   grid-template-columns: 1fr;
   grid-auto-columns: 1fr;
