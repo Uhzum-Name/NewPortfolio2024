@@ -1,0 +1,75 @@
+---
+import Layout from './Layout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  entry: CollectionEntry<'projects'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const p = entry.data;
+---
+
+<Layout title={p.pageTitle} description={p.metaDescription} ogImage={p.ogImage} bodyClass="body-2">
+  <section class="hero-6">
+    <div class="topnav-project">
+      <div class="frame-68">
+        <a href="/" class="label-final">back to home</a>
+      </div>
+    </div>
+    <img class="main-project-image" src={p.heroImage} alt={p.heroImageAlt} sizes="(max-width: 1919px) 100vw, 1920px" loading="lazy" data-reveal="blur" />
+  </section>
+
+  <section class="projects-4">
+    <div class="halftag-halfdiv">
+      <div class="project-content">
+        <div class="label-final">{p.label}</div>
+        <div class="h6-regular">{p.tagline}</div>
+        <div class="label-final" set:html={p.services} />
+        {p.externalLink && (
+          <div class="label-final">
+            <a href={p.externalLink} target="_blank" rel="noopener" class="next-project-link">{p.externalLinkLabel}</a>
+          </div>
+        )}
+      </div>
+    </div>
+    <div class="halftag-halfdiv">
+      <div class="halfdiv" data-reveal={p.overviewReveal ? 'blur' : undefined}>
+        <div>
+          <div class="body-regular w-richtext" set:html={p.overview} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="w-layout-grid collection-list-wrapper">
+      <!--
+        Everything below (challenge, process, images, quotes, outcome) is
+        authored as the markdown body of this case study's content file --
+        see src/content/projects/*.md. Edit that file to change the copy,
+        images, or section order; this template only controls the chrome
+        around it (hero, header, next-project).
+      -->
+      <Content />
+    </div>
+  </section>
+
+  <section class="next-project">
+    <div class="halftag-halfdiv bottom">
+      <div class="label-final">next project</div>
+      <div class="halfdiv-nextproject">
+        <div class="h6-regular">{p.nextProjectLabel}</div>
+        <a href={`/${p.nextProjectSlug}.html`} class="next-project-link">view case study</a>
+      </div>
+    </div>
+    <div class="halfdiv-next">
+      <div class="halfdiv next">
+        <a href={`/${p.nextProjectSlug}.html`} class="next-project-link nextimage w-inline-block">
+          <img class="image-3" src={p.nextProjectImage} alt="" sizes="(max-width: 1919px) 100vw, 1920px" loading="lazy" data-reveal="blur" />
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

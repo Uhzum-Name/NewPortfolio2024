@@ -1,0 +1,105 @@
+/*
+ * Hand-picked subset of Webflow's generic runtime CSS (originally css/webflow.css
+ * in the raw export, ~1800 lines of grid/lightbox/slider/tab framework we don't use).
+ *
+ * azzum-studio.webflow.css already contains all of the site-specific rules
+ * (including per-node grid placement and .w-layout-grid overrides), but a
+ * handful of foundational Webflow utility classes are only defined in the
+ * generic webflow.css and are load-bearing for layout on the 5 pages we kept:
+ *   - .w-inline-block   (nav links, project links, buttons)
+ *   - .w-button         (base button treatment)
+ *   - .w-background-video (+ inner <video>) (case study background videos)
+ *   - .w-embed clearfix (a few embed wrapper divs)
+ *   - img base sizing
+ *
+ * Everything else from webflow.css (lightbox, slider, tabs, dropdowns, forms,
+ * ix2 icon font, etc.) is intentionally omitted because none of it is used
+ * on these 5 pages.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.w-block {
+  display: block;
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.w-clearfix:before,
+.w-clearfix:after,
+.w-embed:before,
+.w-embed:after,
+.w-richtext:before,
+.w-richtext:after {
+  content: ' ';
+  display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
+}
+
+.w-clearfix:after,
+.w-embed:after,
+.w-richtext:after {
+  clear: both;
+}
+
+.w-hidden {
+  display: none;
+}
+
+.w-button {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #3898ec;
+  color: #fff;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.w-richtext ol,
+.w-richtext ul {
+  overflow: hidden;
+}
+
+.w-background-video {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  color: #fff;
+}
+
+.w-background-video > video {
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  bottom: -100%;
+  top: -100%;
+  left: -100%;
+  object-fit: cover;
+  z-index: -100;
+}
+
+.w-background-video > video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
