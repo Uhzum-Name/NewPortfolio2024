@@ -3,7 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const allProjects = await getCollection('projects');
-const projects = allProjects.sort((a, b) => a.data.order - b.data.order);
+const projects = allProjects
+  .filter((project) => project.slug !== 'orion-wealthtech')
+  .sort((a, b) => a.data.order - b.data.order);
 
 const logos = [
   { src: '/images/Sony-logo-white-1.svg', height: 30 },
