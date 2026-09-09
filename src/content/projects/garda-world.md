@@ -11,9 +11,9 @@ overview: |
   <p class="h6-regular">Project Overview</p>
   GardaWorld, a global security provider operating across North America, Europe, and Africa, needed a digital presence that reflected its growing scale and complexity. With sub-brands like Sesami and TalentWorld evolving independently, the challenge was to present a unified corporate identity while supporting each brand's unique role. The platform had to serve distinct audiences—clients, job seekers, and investors—across multiple regions and languages. As part of a broader brand refresh and digital expansion, the redesign aimed to modernize GardaWorld's presence and establish a scalable design system that could support future growth and streamline development across the organization.
 overviewReveal: false
-nextProjectSlug: "orion-wealthtech"
-nextProjectLabel: "Orion"
-nextProjectImage: "/images/Orion-Wealthtech-Website-iPad.jpg"
+nextProjectSlug: "paymaster"
+nextProjectLabel: "Paymaster"
+nextProjectImage: "/images/main-image.png"
 homeLabel: "Gardaworld"
 homeDescription: "Web platform, design system, and brand architecture for a $4B global security company across 3 markets."
 order: 4
