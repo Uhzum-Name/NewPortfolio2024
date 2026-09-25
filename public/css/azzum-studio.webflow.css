@@ -214,6 +214,9 @@
   --radius-image: 10px;
   --lh-body: 1.6;
   --dim: .6;
+  /* Vertical gap between home-page sections (hero, featured work,
+     capabilities, testimonials, about). 172px on desktop, scales down. */
+  --section-gap: clamp(6.5rem, 4rem + 8vw, 10.75rem);
 
   /* Case-study vertical rhythm. The Webflow export's own values already
      formed a coherent scale (48px within a content block, exactly 2x that
@@ -6701,4 +6704,66 @@ img[src$="/images/farm.png"] {
   object-fit: cover;
   object-position: center;
   clip-path: inset(1px 0);
+}
+
+/* Home page: one consistent gap between every section.
+   Previously the gap came from a mix of container padding, section padding
+   and row-gap, giving 56px to 196px depending on the pair. Now each section's
+   own padding is zeroed and the gap is applied once, as padding-top of the
+   next block (the hero keeps its top padding to clear the nav; the last
+   block keeps its bottom padding). */
+/* The body is a flex column with its own 32px gap between sections; the
+   gaps below replace it. */
+.body {
+  grid-row-gap: 0;
+  row-gap: 0;
+}
+
+/* Small-screen rules add their own margins/heights between these blocks;
+   none of them should contribute to the gap. */
+.body .hero-7,
+.body .section-2,
+.body .container.hero,
+.body .container-projects,
+.body .container.experiences {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* On small screens the hero is a fixed-height box with the copy vertically
+   centred, which left ~117px of dead space under it. Size it to its content
+   instead. 9rem top padding keeps the copy exactly where it sat before
+   (7rem container padding + the 2rem body gap that used to sit above it). */
+.body .hero-7 {
+  height: auto;
+  min-height: 0;
+}
+
+.body .container.hero {
+  height: auto;
+  min-height: 0;
+  padding-top: 9rem;
+  padding-bottom: 0;
+}
+
+.body .section-2 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.body .container-projects {
+  padding-top: var(--section-gap);
+  padding-bottom: 0;
+}
+
+.body .hero-7.btm .container.experiences {
+  padding-top: var(--section-gap);
+  padding-bottom: 0;
+  grid-row-gap: var(--section-gap);
+  row-gap: var(--section-gap);
+}
+
+.body .hero-7.btm.abt .container.about-me {
+  padding-top: var(--section-gap);
+  padding-bottom: 5em; /* the original bottom padding of the last block */
 }
