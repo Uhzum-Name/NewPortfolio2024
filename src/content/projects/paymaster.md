@@ -61,8 +61,8 @@ homeMedia:
 <p>‍</p>
 <p>From these insights, we defined our primary persona:</p>
 <p>‍</p>
-<p><strong>Jay, 26 — The “Trying, but Overwhelmed” Spender</strong></p>
-<p>Jay earns a steady salary but carries lingering debt. He wants to make progress but finds most budgeting apps condescending. Jay responds better to gamified challenges, streaks, and visible progress tracking — mechanics that align with his daily media habits on TikTok, casual games, and loyalty programs.</p>
+<p><strong>Jay, 26: The “Trying, but Overwhelmed” Spender</strong></p>
+<p>Jay earns a steady salary but carries lingering debt. He wants to make progress but finds most budgeting apps condescending. Jay responds better to gamified challenges, streaks, and visible progress tracking, mechanics that align with his daily media habits on TikTok, casual games, and loyalty programs.</p>
 </div>
 </div>
 </div>
@@ -85,7 +85,7 @@ homeMedia:
 <p>‍</p>
 <p>1. Trigger: Surface a small, achievable repayment challenge (for example, “Pay $10 this week”).</p>
 <p>2. Action: User confirms or logs the repayment with minimal friction.</p>
-<p>3. Reward: Deliver an emotional high point — a spin, slot, or arcade-style interaction tied to sponsored perks.</p>
+<p>3. Reward: Deliver an emotional high point: a spin, slot, or arcade-style interaction tied to sponsored perks.</p>
 <p>4. Progression: Update the debt tracker visualization, making progress visible.</p>
 <p>5. Repeat: Introduce new challenges, streak multipliers, and return incentives.</p>
 <p>‍</p>

@@ -21,7 +21,7 @@ nextProjectSlug: "garda-world"
 nextProjectLabel: "Gardaworld"
 nextProjectImage: "/images/farm.png"
 homeLabel: "Fläsh"
-homeDescription: "A browser-based AR product across mobile, tablet, and kiosk in 36+ languages — that sparked a company-wide rebrand."
+homeDescription: "A browser-based AR product across mobile, tablet, and kiosk in 36+ languages, which sparked a company-wide rebrand."
 order: 3
 homeMedia:
   type: "image"
@@ -67,7 +67,7 @@ homeMedia:
 <div>
 <div data-reveal="fade" class="body-regular w-richtext">
 <p class="h6-regular">Designing the System</p>
-<p>To support multiple environments without fragmenting the experience, I designed a modular, component-based UI system optimized for React Native. Using atomic design principles, I built a flexible structure that ensured consistency across screen sizes, input types, and user flows—without sacrificing clarity or performance. The system included scalable components for navigation, overlays, inputs, animations, and content layout, enabling the app to adapt seamlessly to its three unique contexts.</p>
+<p>To support multiple environments without fragmenting the experience, I designed a modular, component-based UI system optimized for React Native. Using atomic design principles, I built a flexible structure that ensured consistency across screen sizes, input types, and user flows, without sacrificing clarity or performance. The system included scalable components for navigation, overlays, inputs, animations, and content layout, enabling the app to adapt seamlessly to its three unique contexts.</p>
 </div>
 </div>
 </div>
@@ -99,7 +99,7 @@ homeMedia:
 <div class="fulldiv"><img data-reveal="blur" src="/images/Screenshot-2025-06-15-at-10.07.39-AM.png" loading="lazy" sizes="100vw" srcset="/images/Screenshot-2025-06-15-at-10.07.39-AM-p-500.png 500w, /images/Screenshot-2025-06-15-at-10.07.39-AM-p-800.png 800w, /images/Screenshot-2025-06-15-at-10.07.39-AM-p-1080.png 1080w, /images/Screenshot-2025-06-15-at-10.07.39-AM-p-1600.png 1600w, /images/Screenshot-2025-06-15-at-10.07.39-AM-p-2000.png 2000w, /images/Screenshot-2025-06-15-at-10.07.39-AM-p-2600.png 2600w, /images/Screenshot-2025-06-15-at-10.07.39-AM.png 2940w" alt="" class="image-3">
 <div class="halfdiv quote">
 <p class="body-regular"><strong>From Product to Brand: Inspiring a Company-Wide Refresh</strong></p>
-<p class="body-regular"><em>Following the success of the AR app, Fläsh adopted the visual direction and design system into their broader digital identity. What began as a product design initiative grew into a company-wide rebrand, including a full redesign of their marketing website—rooted in the interface system I established.</em></p>
+<p class="body-regular"><em>Following the success of the AR app, Fläsh adopted the visual direction and design system into their broader digital identity. What began as a product design initiative grew into a company-wide rebrand, including a full redesign of their marketing website, rooted in the interface system I established.</em></p>
 </div>
 </div>
 <div class="halftag-halfdiv">
@@ -108,7 +108,7 @@ homeMedia:
 <div data-reveal="fade" class="body-regular w-richtext">
 <p class="h6-regular">Outcome and Impact<br></p>
 <p>The Fläsh Whitening App was well received by stakeholders and early users. Trade show pilots confirmed that the app was drawing attention and driving booth engagement. Internally, the design system served as a foundational asset for the company’s broader brand refresh, accelerating future digital product development and bringing cohesion to their evolving visual identity. </p>
-<p>More importantly, the app positioned Fläsh as a forward-thinking partner to its dental clients—providing not just physical products but interactive tools that helped drive real-world results in clinical settings.</p>
+<p>More importantly, the app positioned Fläsh as a forward-thinking partner to its dental clients, providing not just physical products but interactive tools that helped drive real-world results in clinical settings.</p>
 </div>
 </div>
 </div>

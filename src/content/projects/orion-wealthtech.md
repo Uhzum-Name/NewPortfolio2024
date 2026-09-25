@@ -1,6 +1,6 @@
 ---
 pageTitle: "Orion – Simplifying Complexity Through Scalable UX"
-metaDescription: "Redesigned Orion Wealthtech's digital platform to reflect its innovative solutions—combining clean UI, intuitive navigation, and a flexible design system to clarify complex financial technology for a broader audience."
+metaDescription: "Redesigned Orion Wealthtech's digital platform to reflect its innovative solutions, combining clean UI, intuitive navigation, and a flexible design system to clarify complex financial technology for a broader audience."
 label: "orion"
 tagline: "Designing a Digital Platform for a Next-Gen Wealth Management Brand"
 services: |
@@ -9,7 +9,7 @@ heroImage: "/images/ipad-thumb.png"
 heroImageAlt: ""
 overview: |
   <p class="h6-regular">Project Overview</p>
-  Orion Wealthtech, a forward-thinking wealth management technology firm, had a disconnect between their innovative product offerings and the way they were represented online. Their existing website lacked clarity, cohesion, and modern usability—failing to reflect the sophistication of the technology and services they provided. For a brand at the intersection of finance and innovation, this posed a challenge: how do you build trust while presenting complex solutions in a simple, engaging way?
+  Orion Wealthtech, a forward-thinking wealth management technology firm, had a disconnect between their innovative product offerings and the way they were represented online. Their existing website lacked clarity, cohesion, and modern usability, failing to reflect the sophistication of the technology and services they provided. For a brand at the intersection of finance and innovation, this posed a challenge: how do you build trust while presenting complex solutions in a simple, engaging way?
 overviewReveal: false
 nextProjectSlug: "paymaster"
 nextProjectLabel: "Paymaster"
@@ -27,7 +27,7 @@ homeMedia:
 <div>
 <div class="body-regular w-richtext">
 <p class="h6-regular">The Challenge</p>
-<p>The goal was to design a modern, user-friendly website that positioned Orion as a leader in wealthtech—while staying grounded in clarity, accessibility, and trust. The platform needed to translate complex technology into a clear, engaging experience for multiple user types, each with distinct goals. To support this, I developed a design system that not only brought consistency to the marketing site but also extended into Orion’s product environment—ensuring alignment across web, app, and platform interfaces. This system laid the groundwork for scalable growth, allowing Orion to evolve both its public-facing presence and internal product experience with cohesion and efficiency.</p>
+<p>The goal was to design a modern, user-friendly website that positioned Orion as a leader in wealthtech while staying grounded in clarity, accessibility, and trust. The platform needed to translate complex technology into a clear, engaging experience for multiple user types, each with distinct goals. To support this, I developed a design system that not only brought consistency to the marketing site but also extended into Orion’s product environment, ensuring alignment across web, app, and platform interfaces. This system laid the groundwork for scalable growth, allowing Orion to evolve both its public-facing presence and internal product experience with cohesion and efficiency.</p>
 </div>
 </div>
 </div>
@@ -38,8 +38,8 @@ homeMedia:
 <div class="body-regular w-richtext">
 <p class="h6-regular">From Insights to Interface: Building a Scalable Design System</p>
 <p>The project began with research into Orion’s brand values, audience expectations, and competitive landscape. I then led the UX and UI design, crafting a system that combined visual storytelling with functional clarity.<br></p>
-<p>A key deliverable was a design system covering typography, color, iconography, and interactivity—built to align design and development, support accessibility, and prevent future design debt.<br></p>
-<p>Working closely with stakeholders, I translated abstract ideas into clear structures and interaction patterns that felt intuitive and modern—replacing financial jargon with concise, user-focused content and visual hierarchy.</p>
+<p>A key deliverable was a design system covering typography, color, iconography, and interactivity. It was built to align design and development, support accessibility, and prevent future design debt.<br></p>
+<p>Working closely with stakeholders, I translated abstract ideas into clear structures and interaction patterns that felt intuitive and modern, replacing financial jargon with concise, user-focused content and visual hierarchy.</p>
 </div>
 </div>
 </div>
@@ -50,7 +50,7 @@ homeMedia:
 <div class="body-regular w-richtext">
 <p class="h6-regular">The Outcome: Driving Conversion, Efficiency, and Brand Alignment Through Scalable Design</p>
 <p>The final website was clean, modern, and fully responsive, built on a modular system that could flex as Orion’s offerings grew. Navigation was simplified to prioritize user needs, while content was framed through storytelling and value-first messaging. Interactive features made technical capabilities feel approachable, while subtle visual cues reinforced credibility and trust.<br></p>
-<p>By pairing intuitive navigation with clear communication, the platform transformed how Orion presented its services—creating a digital experience aligned with the quality of its technology.</p>
+<p>By pairing intuitive navigation with clear communication, the platform transformed how Orion presented its services, creating a digital experience aligned with the quality of its technology.</p>
 </div>
 </div>
 </div>
