@@ -5,6 +5,10 @@ label: "gardaworld"
 tagline: "Web platform, design system, and brand architecture for a $4B global security company across 3 markets."
 services: |
   Modular Design Systems · Scalable Web Architecture · Multilingual &amp; Regionalization UX
+tags:
+  - "Enterprise B2B"
+  - "Marketing Platform"
+  - "Design Systems"
 heroImage: "/images/Frame-23s6.png"
 heroImageAlt: ""
 overview: |

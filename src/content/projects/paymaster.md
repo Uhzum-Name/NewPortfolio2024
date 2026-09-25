@@ -5,6 +5,10 @@ label: "Paymaster"
 tagline: "End-to-end product design for a gamified fintech app that raised $7.8M in seed funding."
 services: |
   Product Design · Gamification · ai-enhanced workflow • <strong>Behavioral UX</strong>
+tags:
+  - "Fintech SaaS"
+  - "Mobile Product UI"
+  - "UX Architecture"
 heroImage: "/images/main-image.png"
 heroImageAlt: ""
 overview: |

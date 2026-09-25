@@ -19,6 +19,9 @@ const projects = defineCollection({
     // the "services" line under the tagline, e.g.
     // 'UX Strategy · ui design · <strong>Design Systems Development</strong>'.
     services: z.string(),
+    // Short descriptor tags, shown dimmed under the project name on the home
+    // grid and in the case study header (replaces `services` there when set).
+    tags: z.array(z.string()).optional(),
 
     // Hero image at the top of the case study (the big image under the nav).
     heroImage: z.string(),

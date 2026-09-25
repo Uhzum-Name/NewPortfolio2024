@@ -5,6 +5,10 @@ label: "Fläsh"
 tagline: "Designing a Multi-Touchpoint AR Experience for a Global Dental Brand"
 services: |
   Multi-Platform Product Design · Scalable Design Systems · AR/AI Interaction Patterns
+tags:
+  - "B2B Dental Tech"
+  - "Web Application"
+  - "Interactive Prototyping"
 heroImage: "/images/home.png"
 heroImageAlt: ""
 overview: |

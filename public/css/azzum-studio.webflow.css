@@ -213,6 +213,7 @@
   --bg: #000000;
   --radius-image: 10px;
   --lh-body: 1.6;
+  --dim: .6;
 
   /* Case-study vertical rhythm. The Webflow export's own values already
      formed a coherent scale (48px within a content block, exactly 2x that
@@ -6632,8 +6633,9 @@ img {
   display: flex;
 }
 
-.testimonial-role {
-  opacity: .6;
+.testimonial-role,
+.tag-line {
+  opacity: var(--dim);
 }
 
 /* Body text readability: one line-height for all running text, at every
@@ -6648,4 +6650,10 @@ li {
 /* One-line label-style rows, not paragraphs */
 .body-large.experience {
   line-height: 1.2;
+}
+
+/* Home cards: keep the tags grouped with the project name above them
+   (the name's own top margin separates it from the image). */
+.project-link .tag-line {
+  margin-top: -6px;
 }

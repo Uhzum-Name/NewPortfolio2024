@@ -70,6 +70,7 @@ const projects = allProjects
                 </div>
               )}
               <p class="label-final">{project.data.homeLabel}</p>
+              {project.data.tags?.length && <p class="label-final tag-line">{project.data.tags.join(' • ')}</p>}
               <p class="body-large">{project.data.homeDescription}</p>
             </a>
           ))}

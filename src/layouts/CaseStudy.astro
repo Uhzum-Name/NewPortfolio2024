@@ -26,7 +26,9 @@ const p = entry.data;
       <div class="project-content">
         <div class="label-final">{p.label}</div>
         <div class="h6-regular">{p.tagline}</div>
-        <div class="label-final" set:html={p.services} />
+        {p.tags?.length
+          ? <div class="label-final tag-line">{p.tags.join(' • ')}</div>
+          : <div class="label-final" set:html={p.services} />}
         {p.externalLink && (
           <div class="label-final">
             <a href={p.externalLink} target="_blank" rel="noopener" class="next-project-link">{p.externalLinkLabel}</a>
