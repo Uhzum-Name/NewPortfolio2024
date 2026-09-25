@@ -212,6 +212,7 @@
   --ui-bg: #3d3d3d99;
   --bg: #000000;
   --radius-image: 10px;
+  --lh-body: 1.6;
 
   /* Case-study vertical rhythm. The Webflow export's own values already
      formed a coherent scale (48px within a content block, exactly 2x that
@@ -6633,4 +6634,18 @@ img {
 
 .testimonial-role {
   opacity: .6;
+}
+
+/* Body text readability: one line-height for all running text, at every
+   breakpoint (this block sits after the media queries so it wins over
+   their per-breakpoint overrides). Headings and labels keep their own. */
+.body-large,
+.body-regular,
+li {
+  line-height: var(--lh-body);
+}
+
+/* One-line label-style rows, not paragraphs */
+.body-large.experience {
+  line-height: 1.2;
 }
