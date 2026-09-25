@@ -7,20 +7,6 @@ const projects = allProjects
   .filter((project) => project.slug !== 'orion-wealthtech')
   .sort((a, b) => a.data.order - b.data.order);
 
-const logos = [
-  { src: '/images/Sony-logo-white-1.svg', height: 30 },
-  { src: '/images/logo-nestle-1.svg' },
-  { src: '/images/DS-1.svg', height: 20 },
-  { src: '/images/Asset-1-3.svg', height: 30 },
-  { src: '/images/Group.svg', height: 25 },
-  { src: '/images/image-20.svg', height: 70 },
-  { src: '/images/Nespresso-wordmark-logo-1.svg', height: 30 },
-  { src: '/images/Group-79.svg', height: 40 },
-  { src: '/images/Orion-Logo.svg', height: 30 },
-  { src: '/images/image-21.svg', height: 60 },
-  { src: '/images/affinitysolutions.svg', height: 30 },
-  { src: '/images/still-here-1.svg', height: 40 },
-];
 ---
 
 <Layout
@@ -37,23 +23,6 @@ const logos = [
         <div class="body-regular">I build production-ready marketing sites and product UI, leveraging AI-accelerated workflows for frictionless developer handoff.</div>
         <a href="https://calendly.com/auz-naeem/introduction-meeting" target="_blank" rel="noopener" class="navbar-label home w-button">Book a call ↗</a>
       </div>
-    </div>
-  </section>
-
-  <section class="intro-section">
-    <div class="section-2">
-      <div class="label-final">Loved by businesses like<br /></div>
-    </div>
-    <div class="logos-container2">
-      {[1, 2, 3].map(() => (
-        <div class="logos-row2">
-          {logos.map((logo) => (
-            <img loading="eager" src={logo.src} alt="" height={logo.height} class="logo-5" />
-          ))}
-        </div>
-      ))}
-      <div class="logos-gradient"></div>
-      <div class="logos-gradient is-inverted"></div>
     </div>
   </section>
 
@@ -154,12 +123,6 @@ const logos = [
           <div id="w-node-f3d98483-4422-a452-5967-850f3297da87-299bdac1" class="div-block-24">
             <div id="w-node-f3d98483-4422-a452-5967-850f3297da88-299bdac1" class="label-final">tim cook - creative director | Bear in the hall<br /></div>
             <div id="w-node-f3d98483-4422-a452-5967-850f3297da8b-299bdac1" class="body-large">&quot;We selected him from a large pool of candidates, chosen for his talented design skills, strategic abilities and his collaborative personality. He was a great addition to our tight group and added to the creative vibe of our agency.&quot;<br /></div>
-          </div>
-        </div>
-        <div class="div-block-23">
-          <div id="w-node-f3d98483-4422-a452-5967-850f3297da8f-299bdac1" class="div-block-24">
-            <div id="w-node-f3d98483-4422-a452-5967-850f3297da90-299bdac1" class="label-final">roy naquin — founder &amp; principal | stratogen labs<br /></div>
-            <div id="w-node-f3d98483-4422-a452-5967-850f3297da93-299bdac1" class="body-large">“Before i worked with Azzum, i struggled to find a practical answer to the various directions i want to take my personal brand and business. A single workshop with Azzum solidified my vision for my brand, bringing my ideas into reality with strategic direction and executive clarity.”<br /></div>
           </div>
         </div>
       </div>
