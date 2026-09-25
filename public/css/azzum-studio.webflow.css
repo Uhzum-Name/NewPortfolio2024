@@ -207,10 +207,10 @@
 }
 
 :root {
-  --white: white;
+  --white: #f4f3ee;
   --black: black;
   --ui-bg: #3d3d3d99;
-  --bg: #0d0d0d;
+  --bg: #000000;
   --radius-image: 10px;
 
   /* Case-study vertical rhythm. The Webflow export's own values already
@@ -299,7 +299,7 @@ img {
 }
 
 .hero-paragraph {
-  color: #fff;
+  color: var(--white);
   width: 30%;
   margin-top: 0;
   margin-bottom: 0;
@@ -395,7 +395,7 @@ img {
 }
 
 .text {
-  color: #fff;
+  color: var(--white);
   width: 30vw;
   margin-top: 0;
   margin-bottom: 0;
@@ -587,7 +587,7 @@ img {
 }
 
 .body-small {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -612,7 +612,7 @@ img {
 }
 
 .body-small.project {
-  color: #fff;
+  color: var(--white);
   line-height: 1.2;
 }
 
@@ -621,7 +621,7 @@ img {
 }
 
 .subh {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -699,7 +699,7 @@ img {
 }
 
 .heading-6 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppfraktionmono, sans-serif;
@@ -834,7 +834,7 @@ img {
 }
 
 .heading-8 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppneuemontreal, sans-serif;
@@ -878,7 +878,7 @@ img {
 .head-1 {
   opacity: 1;
   filter: blur();
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -928,7 +928,7 @@ img {
 }
 
 .heading-9 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 13px;
@@ -959,7 +959,7 @@ img {
 }
 
 .text-6 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 31px;
@@ -987,7 +987,7 @@ img {
 }
 
 .text-7 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -1007,7 +1007,7 @@ img {
 }
 
 .heading-10 {
-  color: #fff;
+  color: var(--white);
   text-align: right;
   margin-top: 0;
   margin-bottom: 0;
@@ -1045,7 +1045,7 @@ img {
 }
 
 .heading-11 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppneuemontreal, sans-serif;
@@ -1065,7 +1065,7 @@ img {
 }
 
 .text-9 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppneuemontreal, sans-serif;
@@ -1095,7 +1095,7 @@ img {
 }
 
 .text-10 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppneuemontreal, sans-serif;
@@ -1124,7 +1124,7 @@ img {
 }
 
 .text-11 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -1144,7 +1144,7 @@ img {
 }
 
 .heading-12 {
-  color: #fff;
+  color: var(--white);
   text-align: right;
   margin-top: 0;
   margin-bottom: 0;
@@ -1185,7 +1185,7 @@ img {
 }
 
 .heading-13 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppneuemontreal, sans-serif;
@@ -1219,7 +1219,7 @@ img {
 }
 
 .text-13 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppneuemontreal, sans-serif;
@@ -1249,7 +1249,7 @@ img {
 }
 
 .text-14 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppneuemontreal, sans-serif;
@@ -1271,7 +1271,7 @@ img {
 }
 
 .text-15 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppneuemontreal, sans-serif;
@@ -1282,7 +1282,7 @@ img {
 }
 
 .text-16 {
-  color: #fff;
+  color: var(--white);
   text-align: right;
   margin-top: 0;
   margin-bottom: 0;
@@ -1304,7 +1304,7 @@ img {
 }
 
 .body-large {
-  color: #fff;
+  color: var(--white);
   text-align: left;
   text-transform: none;
   margin-top: 0;
@@ -1365,7 +1365,7 @@ img {
 }
 
 .heading-15 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 13px;
@@ -1386,7 +1386,7 @@ img {
 .col-right {
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-  color: #fff;
+  color: var(--white);
   flex-flow: column;
   justify-content: flex-start;
   align-items: stretch;
@@ -1537,7 +1537,7 @@ img {
 }
 
 .heading-19 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 13px;
@@ -1557,7 +1557,7 @@ img {
 }
 
 .text-19 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 76px;
@@ -1567,7 +1567,7 @@ img {
 }
 
 .parapgraph-2 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -1619,7 +1619,7 @@ img {
 }
 
 .text-20 {
-  color: #fff;
+  color: var(--white);
   flex: 1;
   margin-top: 0;
   margin-bottom: 0;
@@ -1753,7 +1753,7 @@ img {
 }
 
 .text-21 {
-  color: #fff;
+  color: var(--white);
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
@@ -1765,7 +1765,7 @@ img {
 }
 
 .text-22 {
-  color: #fff;
+  color: var(--white);
   text-align: justify;
   text-transform: uppercase;
   margin-top: 0;
@@ -1799,7 +1799,7 @@ img {
 }
 
 .text-23 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 13px;
@@ -1865,7 +1865,7 @@ img {
 }
 
 .text-24 {
-  color: #fff;
+  color: var(--white);
   letter-spacing: -.02em;
   margin-top: 0;
   margin-bottom: 0;
@@ -1877,7 +1877,7 @@ img {
 }
 
 .h5-caps {
-  color: #fff;
+  color: var(--white);
   text-align: justify;
   text-transform: uppercase;
   width: 50%;
@@ -1916,7 +1916,7 @@ img {
 }
 
 .text-26 {
-  color: #fff;
+  color: var(--white);
   width: 20vw;
   margin-top: 0;
   margin-bottom: 0;
@@ -1953,7 +1953,7 @@ img {
 }
 
 .text-27 {
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0;
   flex: 0 auto;
   width: 300px;
@@ -2010,7 +2010,7 @@ img {
 }
 
 .h6 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   font-family: Ppmonumentextended, sans-serif;
   font-size: 10px;
@@ -2018,7 +2018,7 @@ img {
 }
 
 .body-large-2 {
-  color: #fff;
+  color: var(--white);
   letter-spacing: .1px;
   text-transform: uppercase;
   font-family: Ppneuemontreal, sans-serif;
@@ -2082,7 +2082,7 @@ img {
 }
 
 .head-6 {
-  color: #fff;
+  color: var(--white);
   text-align: center;
   text-transform: uppercase;
   margin-top: 0;
@@ -2096,7 +2096,7 @@ img {
 
 .head-6.project {
   opacity: 0;
-  color: #fff;
+  color: var(--white);
   text-align: left;
 }
 
@@ -2110,7 +2110,7 @@ img {
 }
 
 .text-29 {
-  color: #fff;
+  color: var(--white);
   text-align: center;
   letter-spacing: -.02em;
   text-transform: uppercase;
@@ -2131,7 +2131,7 @@ img {
 }
 
 .h4 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   font-family: Ppneuemontreal, sans-serif;
   font-size: 10px;
@@ -2168,7 +2168,7 @@ img {
 
 .textlogo {
   pointer-events: auto;
-  color: #fff;
+  color: var(--white);
   letter-spacing: -.02em;
   text-transform: uppercase;
   mix-blend-mode: normal;
@@ -2182,7 +2182,7 @@ img {
 }
 
 .text-31 {
-  color: #fff;
+  color: var(--white);
   letter-spacing: -.02em;
   text-transform: uppercase;
   margin-top: 0;
@@ -2195,7 +2195,7 @@ img {
 }
 
 .text-32 {
-  color: #fff;
+  color: var(--white);
   text-align: right;
   letter-spacing: -.02em;
   text-transform: uppercase;
@@ -2245,7 +2245,7 @@ img {
 }
 
 .about {
-  color: #fff;
+  color: var(--white);
   text-align: center;
   text-transform: uppercase;
   margin-top: 0;
@@ -2324,7 +2324,7 @@ img {
 }
 
 .heading-20 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2356,7 +2356,7 @@ img {
 }
 
 .text-33 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2378,7 +2378,7 @@ img {
 }
 
 .lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-fusce-varius-faucibus-massa-sollicitudin-amet-augue-nibh-metus-a-semper-purus-mauris-duis-lorem-eu-neque-tristique-quis-duis-nibh-scelerisque-ac-adipiscing-velit-non-nulla-in-amet-lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-fusce-varius-faucibus-massa-sollicitudin-amet-augue-nibh-metus-a-semper-purus-mauris-duis-lorem-eu-neque-tristique-quis-duis-nibh-scelerisque-ac-adipiscing-velit-non-nulla-in-amet {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2426,7 +2426,7 @@ img {
 }
 
 .text-34 {
-  color: #fff;
+  color: var(--white);
   letter-spacing: -.06em;
   text-transform: uppercase;
   margin-top: 0;
@@ -2483,7 +2483,7 @@ img {
 }
 
 .text-35 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2514,7 +2514,7 @@ img {
 }
 
 .heading-21 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2525,7 +2525,7 @@ img {
 }
 
 .heading-22 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2583,7 +2583,7 @@ img {
 }
 
 .timezone-eua {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2620,7 +2620,7 @@ img {
 }
 
 .body-large-link {
-  color: #fff;
+  color: var(--white);
   text-align: justify;
   text-transform: uppercase;
   margin-top: 0;
@@ -2648,7 +2648,7 @@ img {
 }
 
 .body-large-copy {
-  color: #fff;
+  color: var(--white);
   text-align: justify;
   text-transform: uppercase;
   margin-top: 0;
@@ -2676,7 +2676,7 @@ img {
 }
 
 .body-small-nyc {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2701,7 +2701,7 @@ img {
 }
 
 .body-small-copyright {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2810,7 +2810,7 @@ img {
 }
 
 .text-28-copy {
-  color: #fff;
+  color: var(--white);
   text-align: center;
   text-transform: uppercase;
   margin-top: 0;
@@ -2863,7 +2863,7 @@ img {
 }
 
 .heading-24 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2874,7 +2874,7 @@ img {
 }
 
 .heading-25 {
-  color: #fff;
+  color: var(--white);
   text-align: right;
   text-transform: uppercase;
   margin-top: 0;
@@ -2886,7 +2886,7 @@ img {
 }
 
 .heading-26 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -2897,7 +2897,7 @@ img {
 }
 
 .heading-27 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -3066,7 +3066,7 @@ img {
 }
 
 .navbar-copy {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -3091,7 +3091,7 @@ img {
 }
 
 .navbar-copy.project {
-  color: #fff;
+  color: var(--white);
 }
 
 .navbar-copy.next {
@@ -3104,7 +3104,7 @@ img {
 }
 
 .body-small-copyright-copy {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -3148,7 +3148,7 @@ img {
 .head-2 {
   opacity: 1;
   filter: blur();
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -3177,7 +3177,7 @@ img {
 }
 
 .style-guide {
-  color: #fff;
+  color: var(--white);
   background-color: var(--bg);
   align-items: stretch;
   width: 100vw;
@@ -3186,7 +3186,7 @@ img {
 }
 
 .h1-regular {
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0;
   text-transform: uppercase;
   font-family: Ppmonumentextended, sans-serif;
@@ -3215,7 +3215,7 @@ img {
 }
 
 .h2-regular {
-  color: #fff;
+  color: var(--white);
   text-align: left;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -3236,7 +3236,7 @@ img {
 }
 
 .h4-regular {
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0;
   text-transform: none;
   font-family: Ppneuemontreal, sans-serif;
@@ -3246,7 +3246,7 @@ img {
 }
 
 .h5-regular {
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0;
   text-transform: none;
   font-family: Ppneuemontreal, sans-serif;
@@ -3256,7 +3256,7 @@ img {
 }
 
 .h6-regular {
-  color: #fff;
+  color: var(--white);
   text-align: left;
   letter-spacing: 0;
   text-transform: none;
@@ -3268,7 +3268,7 @@ img {
 }
 
 .body-regular {
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0;
   text-transform: none;
   font-family: Ppneuemontreal, sans-serif;
@@ -3278,7 +3278,7 @@ img {
 }
 
 .label-final {
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0;
   text-transform: uppercase;
   flex: 0 auto;
@@ -3305,7 +3305,7 @@ img {
 .text-styles-wrapper {
   grid-column-gap: 24px;
   grid-row-gap: 24px;
-  color: #fff;
+  color: var(--white);
   flex-direction: column;
   padding: 0;
   display: flex;
@@ -3375,7 +3375,7 @@ img {
 }
 
 .type-80 {
-  color: #fff;
+  color: var(--white);
   text-align: center;
   letter-spacing: -.06em;
   text-transform: uppercase;
@@ -3418,7 +3418,7 @@ img {
 }
 
 .type-80-2 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -3438,7 +3438,7 @@ img {
 }
 
 .type-80-3 {
-  color: #fff;
+  color: var(--white);
   text-align: justify;
   text-transform: uppercase;
   margin-top: 0;
@@ -3451,7 +3451,7 @@ img {
 
 .frame-97 {
   grid-column-gap: 8px;
-  background-color: #fff;
+  background-color: var(--white);
   flex: 0 auto;
   justify-content: flex-start;
   align-items: center;
@@ -3552,7 +3552,7 @@ img {
 }
 
 .intro-section {
-  color: #fff;
+  color: var(--white);
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -3572,7 +3572,7 @@ img {
 }
 
 .text-36 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -3597,7 +3597,7 @@ img {
 }
 
 .type-80-5 {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 45px;
@@ -3663,7 +3663,7 @@ img {
 }
 
 .type-80-6 {
-  color: #fff;
+  color: var(--white);
   text-align: center;
   text-transform: uppercase;
   margin-top: 0;
@@ -3683,7 +3683,7 @@ img {
 }
 
 .text-37 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -3703,7 +3703,7 @@ img {
 }
 
 .formerly-incfile {
-  color: #fff;
+  color: var(--white);
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -3792,7 +3792,7 @@ img {
 }
 
 .text-38 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -3823,7 +3823,7 @@ img {
 }
 
 .type-80-7 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -3834,7 +3834,7 @@ img {
 }
 
 .type-80-8 {
-  color: #fff;
+  color: var(--white);
   text-align: justify;
   margin-top: 0;
   margin-bottom: 0;
@@ -3971,7 +3971,7 @@ img {
 }
 
 .body-light {
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0;
   text-transform: none;
   font-family: Ppneuemontreal, sans-serif;
@@ -3984,7 +3984,7 @@ img {
   color: #000;
   letter-spacing: 0;
   text-transform: uppercase;
-  background-color: #fff;
+  background-color: var(--white);
   font-family: Ppfraktionmono, sans-serif;
   font-size: .6875rem;
   font-weight: 400;
@@ -4006,7 +4006,7 @@ img {
 }
 
 .navbar-label {
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0;
   text-transform: uppercase;
   font-family: Ppfraktionmono, sans-serif;
@@ -4046,7 +4046,7 @@ img {
 }
 
 .label-final-copy {
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0;
   text-transform: uppercase;
   font-family: Ppfraktionmono, sans-serif;
@@ -4062,7 +4062,7 @@ img {
 }
 
 .list-item {
-  color: #fff;
+  color: var(--white);
   font-size: 1rem;
   line-height: 1.2;
 }
@@ -4227,8 +4227,8 @@ img {
 
 .link-block-7 {
   opacity: 1;
-  -webkit-text-decoration: underline #fff;
-  text-decoration: underline #fff;
+  -webkit-text-decoration: underline var(--white);
+  text-decoration: underline var(--white);
 }
 
 .link-block-7:hover {
