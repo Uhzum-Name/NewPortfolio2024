@@ -6686,3 +6686,19 @@ li {
 .next-project-link.nextimage {
   display: block;
 }
+
+/* Background videos sit at z-index: -100 inside their wrapper. Now that the
+   wrapper has an opaque backdrop, it must form its own stacking context or
+   the video paints *behind* that backdrop and disappears. */
+.w-background-video {
+  isolation: isolate;
+}
+
+/* farm.png has a half-transparent 1px edge row along the top and bottom (baked
+   into the asset), which reads as a pale line. Trim it off; used as the
+   Gardaworld body image and as the "next project" image on Fläsh. */
+img[src$="/images/farm.png"] {
+  object-fit: cover;
+  object-position: center;
+  clip-path: inset(1px 0);
+}
