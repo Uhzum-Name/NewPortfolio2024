@@ -6601,3 +6601,33 @@ img {
     animation: none;
   }
 }
+/* Testimonial author row: square headshot to the left of name + role/company */
+.div-block-24.testimonial {
+  grid-column: 1 / -1;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+}
+
+.testimonial-author {
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.testimonial-headshot {
+  object-fit: cover;
+  border-radius: 0;
+  flex: none;
+  width: 48px;
+  height: 48px;
+}
+
+.testimonial-meta {
+  flex-flow: column;
+  gap: 6px;
+  display: flex;
+}
+
+.testimonial-role {
+  opacity: .6;
+}
