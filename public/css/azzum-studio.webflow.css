@@ -6652,8 +6652,14 @@ li {
   line-height: 1.2;
 }
 
-/* Home cards: keep the tags grouped with the project name above them
-   (the name's own top margin separates it from the image). */
-.project-link .tag-line {
-  margin-top: -6px;
+/* Project name + tags: same stack as testimonial name + role/company
+   (6px gap, tags dimmed). */
+.project-meta {
+  flex-flow: column;
+  gap: 6px;
+  display: flex;
+}
+
+.project-meta .tag-line {
+  margin-top: 0;
 }

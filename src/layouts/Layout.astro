@@ -1,4 +1,6 @@
 ---
+import { assetVersion } from '../assetVersion';
+
 export interface Props {
   title: string;
   description: string;
@@ -31,9 +33,9 @@ const {
     <meta name="twitter:description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="/css/normalize.css" rel="stylesheet" />
-    <link href="/css/webflow-base.css" rel="stylesheet" />
-    <link href="/css/azzum-studio.webflow.css" rel="stylesheet" />
+    <link href={`/css/normalize.css?v=${assetVersion}`} rel="stylesheet" />
+    <link href={`/css/webflow-base.css?v=${assetVersion}`} rel="stylesheet" />
+    <link href={`/css/azzum-studio.webflow.css?v=${assetVersion}`} rel="stylesheet" />
 
     <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
     <link href="/images/webclip.png" rel="apple-touch-icon" />
@@ -173,6 +175,6 @@ const {
       </div>
     </div>
 
-    <script is:inline src="/js/site.js" defer></script>
+    <script is:inline src={`/js/site.js?v=${assetVersion}`} defer></script>
   </body>
 </html>

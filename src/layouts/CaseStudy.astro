@@ -24,11 +24,12 @@ const p = entry.data;
   <section class="projects-4">
     <div class="halftag-halfdiv">
       <div class="project-content">
-        <div class="label-final">{p.label}</div>
+        <div class="project-meta">
+          <div class="label-final">{p.label}</div>
+          {p.tags?.length && <div class="label-final tag-line">{p.tags.join(' • ')}</div>}
+        </div>
         <div class="h6-regular">{p.tagline}</div>
-        {p.tags?.length
-          ? <div class="label-final tag-line">{p.tags.join(' • ')}</div>
-          : <div class="label-final" set:html={p.services} />}
+        {!p.tags?.length && <div class="label-final" set:html={p.services} />}
         {p.externalLink && (
           <div class="label-final">
             <a href={p.externalLink} target="_blank" rel="noopener" class="next-project-link">{p.externalLinkLabel}</a>

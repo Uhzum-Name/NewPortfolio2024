@@ -69,8 +69,10 @@ const projects = allProjects
                   </video>
                 </div>
               )}
-              <p class="label-final">{project.data.homeLabel}</p>
-              {project.data.tags?.length && <p class="label-final tag-line">{project.data.tags.join(' • ')}</p>}
+              <div class="project-meta">
+                <p class="label-final">{project.data.homeLabel}</p>
+                {project.data.tags?.length && <p class="label-final tag-line">{project.data.tags.join(' • ')}</p>}
+              </div>
               <p class="body-large">{project.data.homeDescription}</p>
             </a>
           ))}
