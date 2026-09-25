@@ -6767,3 +6767,24 @@ img[src$="/images/farm.png"] {
   padding-top: var(--section-gap);
   padding-bottom: 5em; /* the original bottom padding of the last block */
 }
+
+/* Home-page video card: the clip is 1280x720 (16:9, a phone mockup centred on
+   black). It used to sit in a box with a fixed vw-based height, so anywhere the
+   box was wider than 16:9 (768-1200px screens) object-fit: cover cropped the
+   top and bottom of the mockup. Lock the box to the clip's own ratio at every
+   breakpoint; it also makes the card the same height as the 16:9 image cards. */
+.vid.homevid {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Case-study videos: same fix as the home card. Each .vid carries its clip's
+   own ratio inline (style="aspect-ratio: W / H"); the box now follows it at
+   every breakpoint instead of a fixed 800px / 40vw / 60vw height, which cropped
+   the top and bottom on tablet widths and the sides on desktop. Full width to
+   match the case-study images. */
+.collection-list-wrapper .vid {
+  width: 100%;
+  height: auto;
+}

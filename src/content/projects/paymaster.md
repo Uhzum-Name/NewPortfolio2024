@@ -94,7 +94,7 @@ homeMedia:
 </div>
 </div>
 </div><img data-reveal="blur" src="/images/core-loop.png" loading="lazy" sizes="(max-width: 1921px) 100vw, 1921px" srcset="/images/core-loop-p-500.png 500w, /images/core-loop-p-800.png 800w, /images/core-loop-p-1080.png 1080w, /images/core-loop-p-1600.png 1600w, /images/core-loop.png 1921w" alt="" class="image-3"><img data-reveal="blur" src="/images/payment-flow.png" loading="lazy" sizes="(max-width: 1921px) 100vw, 1921px" srcset="/images/payment-flow-p-500.png 500w, /images/payment-flow-p-800.png 800w, /images/payment-flow-p-1080.png 1080w, /images/payment-flow-p-1600.png 1600w, /images/payment-flow.png 1921w" alt="" class="image-3">
-<div data-poster-url="/videos/complete-pay-new-poster-00001.jpg" data-video-urls="/videos/complete-pay-new-transcode.mp4,/videos/complete-pay-new-transcode.webm" data-autoplay="true" data-loop="true" class="vid w-background-video w-background-video-atom"><video id="71147e99-e3d9-06ed-65cc-533a2cf7ef87-video" autoplay="" loop="" style="background-image:url(&quot;/videos/complete-pay-new-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
+<div data-poster-url="/videos/complete-pay-new-poster-00001.jpg" data-video-urls="/videos/complete-pay-new-transcode.mp4,/videos/complete-pay-new-transcode.webm" data-autoplay="true" data-loop="true" style="aspect-ratio: 1280 / 718" class="vid w-background-video w-background-video-atom"><video id="71147e99-e3d9-06ed-65cc-533a2cf7ef87-video" autoplay="" loop="" style="background-image:url(&quot;/videos/complete-pay-new-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
 <source src="/videos/complete-pay-new-transcode.mp4">
 <source src="/videos/complete-pay-new-transcode.webm">
 </video></div>
@@ -108,7 +108,7 @@ homeMedia:
 </div>
 </div>
 </div>
-<div data-poster-url="/videos/onboard-flow-short-poster-00001.jpg" data-video-urls="/videos/onboard-flow-short-transcode.mp4,/videos/onboard-flow-short-transcode.webm" data-autoplay="true" data-loop="true" class="vid w-background-video w-background-video-atom"><video id="f85974f0-0e2a-811d-6551-c04e405f99de-video" autoplay="" loop="" style="background-image:url(&quot;/videos/onboard-flow-short-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
+<div data-poster-url="/videos/onboard-flow-short-poster-00001.jpg" data-video-urls="/videos/onboard-flow-short-transcode.mp4,/videos/onboard-flow-short-transcode.webm" data-autoplay="true" data-loop="true" style="aspect-ratio: 1280 / 718" class="vid w-background-video w-background-video-atom"><video id="f85974f0-0e2a-811d-6551-c04e405f99de-video" autoplay="" loop="" style="background-image:url(&quot;/videos/onboard-flow-short-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
 <source src="/videos/onboard-flow-short-transcode.mp4">
 <source src="/videos/onboard-flow-short-transcode.webm">
 </video></div><img data-reveal="blur" src="/images/connect.png" loading="lazy" sizes="(max-width: 1921px) 100vw, 1921px" srcset="/images/connect-p-500.png 500w, /images/connect-p-800.png 800w, /images/connect-p-1080.png 1080w, /images/connect-p-1600.png 1600w, /images/connect.png 1921w" alt="" class="image-3">
@@ -122,7 +122,7 @@ homeMedia:
 </div>
 </div>
 </div>
-<div data-poster-url="/videos/arcade-flow-4k-poster-00001.jpg" data-video-urls="/videos/arcade-flow-4k-transcode.mp4,/videos/arcade-flow-4k-transcode.webm" data-autoplay="true" data-loop="true" class="vid w-background-video w-background-video-atom"><video id="21bc32bf-10f8-5f0f-a0db-1bfc71dfe437-video" autoplay="" loop="" style="background-image:url(&quot;/videos/arcade-flow-4k-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
+<div data-poster-url="/videos/arcade-flow-4k-poster-00001.jpg" data-video-urls="/videos/arcade-flow-4k-transcode.mp4,/videos/arcade-flow-4k-transcode.webm" data-autoplay="true" data-loop="true" style="aspect-ratio: 1280 / 718" class="vid w-background-video w-background-video-atom"><video id="21bc32bf-10f8-5f0f-a0db-1bfc71dfe437-video" autoplay="" loop="" style="background-image:url(&quot;/videos/arcade-flow-4k-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
 <source src="/videos/arcade-flow-4k-transcode.mp4">
 <source src="/videos/arcade-flow-4k-transcode.webm">
 </video></div><img data-reveal="blur" src="/images/streak.png" loading="lazy" sizes="(max-width: 1921px) 100vw, 1921px" srcset="/images/streak-p-500.png 500w, /images/streak-p-800.png 800w, /images/streak-p-1080.png 1080w, /images/streak-p-1600.png 1600w, /images/streak.png 1921w" alt="" class="image-3"><img data-reveal="blur" src="/images/congrats.png" loading="lazy" sizes="(max-width: 1919px) 100vw, 1920px" srcset="/images/congrats-p-500.png 500w, /images/congrats-p-800.png 800w, /images/congrats-p-1080.png 1080w, /images/congrats-p-1600.png 1600w, /images/congrats.png 1920w" alt="" class="image-3"><img data-reveal="blur" src="/images/payout.png" loading="lazy" sizes="(max-width: 1921px) 100vw, 1921px" srcset="/images/payout-p-500.png 500w, /images/payout-p-800.png 800w, /images/payout-p-1080.png 1080w, /images/payout-p-1600.png 1600w, /images/payout.png 1921w" alt="" class="image-3">

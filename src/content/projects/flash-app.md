@@ -57,7 +57,7 @@ homeMedia:
 <p class="body-regular"><strong>Aligning Product and Brand Direction</strong></p>
 <p class="body-regular"><em>As part of the engagement, the client asked for two distinct UI design concepts to evaluate. Both concepts were fully fleshed explorations of how the product’s interface could balance clarity for patients with a bold, modern identity. After review, the client selected the direction that best aligned with their long-term rebranding goals.<br>‍<br>This decision was strategic. The chosen UI concept was not just about designing an app. It became the foundation for Fläsh’s broader digital identity, influencing the redesign of their company website and setting the tone for a refreshed brand presence.</em></p>
 </div>
-<div data-poster-url="/videos/new-home-fixed-poster-00001.jpg" data-video-urls="/videos/new-home-fixed-transcode.mp4,/videos/new-home-fixed-transcode.webm" data-autoplay="true" data-loop="true" class="vid w-background-video w-background-video-atom"><video id="71147e99-e3d9-06ed-65cc-533a2cf7ef87-video" autoplay="" loop="" style="background-image:url(&quot;/videos/new-home-fixed-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
+<div data-poster-url="/videos/new-home-fixed-poster-00001.jpg" data-video-urls="/videos/new-home-fixed-transcode.mp4,/videos/new-home-fixed-transcode.webm" data-autoplay="true" data-loop="true" style="aspect-ratio: 1214 / 720" class="vid w-background-video w-background-video-atom"><video id="71147e99-e3d9-06ed-65cc-533a2cf7ef87-video" autoplay="" loop="" style="background-image:url(&quot;/videos/new-home-fixed-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
 <source src="/videos/new-home-fixed-transcode.mp4">
 <source src="/videos/new-home-fixed-transcode.webm">
 </video></div>
@@ -82,7 +82,7 @@ homeMedia:
 </div>
 </div>
 </div><img data-reveal="blur" src="/images/region-select.png" loading="lazy" sizes="100vw" srcset="/images/region-select-p-500.png 500w, /images/region-select-p-800.png 800w, /images/region-select-p-1080.png 1080w, /images/region-select-p-1600.png 1600w, /images/region-select.png 1921w" alt="" class="image-3">
-<div data-poster-url="/videos/Flash-app-language-ui-poster-00001.jpg" data-video-urls="/videos/Flash-app-language-ui-transcode.mp4,/videos/Flash-app-language-ui-transcode.webm" data-autoplay="true" data-loop="true" class="vid w-background-video w-background-video-atom"><video id="910c096a-027b-1b1b-b875-ae9b81e25dca-video" autoplay="" loop="" style="background-image:url(&quot;/videos/Flash-app-language-ui-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
+<div data-poster-url="/videos/Flash-app-language-ui-poster-00001.jpg" data-video-urls="/videos/Flash-app-language-ui-transcode.mp4,/videos/Flash-app-language-ui-transcode.webm" data-autoplay="true" data-loop="true" style="aspect-ratio: 1182 / 720" class="vid w-background-video w-background-video-atom"><video id="910c096a-027b-1b1b-b875-ae9b81e25dca-video" autoplay="" loop="" style="background-image:url(&quot;/videos/Flash-app-language-ui-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
 <source src="/videos/Flash-app-language-ui-transcode.mp4">
 <source src="/videos/Flash-app-language-ui-transcode.webm">
 </video></div>
@@ -113,7 +113,7 @@ homeMedia:
 </div>
 </div>
 </div>
-<div data-poster-url="/videos/whitesmile-aftermovie_en_1080-1-poster-00001.jpg" data-video-urls="/videos/whitesmile-aftermovie_en_1080-1-transcode.mp4,/videos/whitesmile-aftermovie_en_1080-1-transcode.webm" data-autoplay="true" data-loop="true" class="vid w-background-video w-background-video-atom"><video id="d27b42e1-08fe-a96f-7786-766a03c404ae-video" autoplay="" loop="" style="background-image:url(&quot;/videos/whitesmile-aftermovie_en_1080-1-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
+<div data-poster-url="/videos/whitesmile-aftermovie_en_1080-1-poster-00001.jpg" data-video-urls="/videos/whitesmile-aftermovie_en_1080-1-transcode.mp4,/videos/whitesmile-aftermovie_en_1080-1-transcode.webm" data-autoplay="true" data-loop="true" style="aspect-ratio: 1280 / 720" class="vid w-background-video w-background-video-atom"><video id="d27b42e1-08fe-a96f-7786-766a03c404ae-video" autoplay="" loop="" style="background-image:url(&quot;/videos/whitesmile-aftermovie_en_1080-1-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
 <source src="/videos/whitesmile-aftermovie_en_1080-1-transcode.mp4">
 <source src="/videos/whitesmile-aftermovie_en_1080-1-transcode.webm">
 </video></div>
