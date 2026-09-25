@@ -257,7 +257,7 @@ li {
 
 img {
   max-width: 100%;
-  display: inline-block;
+  display: block;
 }
 
 .hero {
@@ -2986,7 +2986,7 @@ img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  display: inline-block;
+  display: block;
 }
 
 .project-image.home {
@@ -6662,4 +6662,27 @@ li {
 
 .project-meta .tag-line {
   margin-top: 0;
+}
+
+/* Image / media containers: dark backdrop + clipping, so any white canvas that
+   shows before an image decodes, at rounded corners, or through transparent
+   PNG edges is masked by the page colour instead of bleeding through.
+   var(--bg) is #000000. The next-project link previously inherited the white
+   `.next-project-link` fill, and as an inline-block anchor it added a
+   baseline gap under the image, hence display: block. */
+.image-3,
+.main-project-image,
+.project-image,
+.aboutmeimage,
+.testimonial-headshot,
+.vid,
+.w-background-video,
+.halfdiv-next,
+.next-project-link.nextimage {
+  background-color: var(--bg);
+  overflow: hidden;
+}
+
+.next-project-link.nextimage {
+  display: block;
 }
