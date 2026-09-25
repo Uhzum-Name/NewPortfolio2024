@@ -210,6 +210,8 @@
   --white: white;
   --black: black;
   --ui-bg: #3d3d3d99;
+  --bg: #0d0d0d;
+  --radius-image: 10px;
 
   /* Case-study vertical rhythm. The Webflow export's own values already
      formed a coherent scale (48px within a content block, exactly 2x that
@@ -258,7 +260,7 @@ img {
 
 .hero {
   grid-row-gap: 135px;
-  background-color: #000;
+  background-color: var(--bg);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -895,7 +897,7 @@ img {
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   cursor: crosshair;
-  background-color: #000;
+  background-color: var(--bg);
   flex-flow: column;
   justify-content: space-between;
   margin-left: auto;
@@ -1721,7 +1723,7 @@ img {
 
 .hero-3 {
   grid-row-gap: 135px;
-  background-color: #000;
+  background-color: var(--bg);
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -2051,7 +2053,7 @@ img {
 
 .hero-5 {
   z-index: 0;
-  background-color: #000;
+  background-color: var(--bg);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -2930,7 +2932,7 @@ img {
 .body-2 {
   grid-column-gap: 2vw;
   grid-row-gap: 2vw;
-  background-color: #000;
+  background-color: var(--bg);
   flex-flow: column;
   justify-content: space-between;
   max-width: none;
@@ -2991,7 +2993,7 @@ img {
 
 .project-image.home.on {
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: var(--radius-image);
   display: block;
 }
 
@@ -3026,7 +3028,7 @@ img {
 
 .image-3 {
   aspect-ratio: auto;
-  border-radius: 10px;
+  border-radius: var(--radius-image);
   overflow: hidden;
 }
 
@@ -3176,7 +3178,7 @@ img {
 
 .style-guide {
   color: #fff;
-  background-color: #000;
+  background-color: var(--bg);
   align-items: stretch;
   width: 100vw;
   display: block;
@@ -3917,7 +3919,7 @@ img {
 .main-project-image {
   aspect-ratio: auto;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: var(--radius-image);
   width: 100%;
   height: 80%;
 }
@@ -4000,7 +4002,7 @@ img {
 }
 
 .next-project-link.nextimage {
-  border-radius: 10px;
+  border-radius: var(--radius-image);
 }
 
 .navbar-label {
@@ -4153,13 +4155,13 @@ img {
 }
 
 .vid {
-  border-radius: 10px;
+  border-radius: var(--radius-image);
   width: 100%;
   height: 800px;
 }
 
 .vid.homevid {
-  border-radius: 10px;
+  border-radius: var(--radius-image);
   height: 30vw;
 }
 
@@ -4284,6 +4286,7 @@ img {
   height: 37%;
   max-height: 39.8869%;
   margin-top: 2em;
+  border-radius: var(--radius-image);
 }
 
 .div-block-25 {
@@ -5191,7 +5194,7 @@ img {
   }
 
   .next-project-link.nextimage {
-    border-radius: 11px;
+    border-radius: var(--radius-image);
   }
 
   .navbar-label, .label-final-copy {
@@ -6616,7 +6619,7 @@ img {
 
 .testimonial-headshot {
   object-fit: cover;
-  border-radius: 0;
+  border-radius: var(--radius-image);
   flex: none;
   width: 48px;
   height: 48px;
