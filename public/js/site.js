@@ -51,7 +51,15 @@
       new SplitType('[data-text-split]', { types: 'words, chars', tagName: 'span' });
     }
 
-    if (typeof gsap !== 'undefined') {
+    // Every scroll-triggered typewriter timeline, so the "settle" pass below
+    // can finish any that a reload / scroll-restore left half-played.
+    var typewriters = [];
+
+    if (typeof gsap !== 'undefined' && typeof SplitType !== 'undefined') {
+      if (typeof ScrollTrigger !== 'undefined' && gsap.registerPlugin) {
+        gsap.registerPlugin(ScrollTrigger);
+      }
+
       document.querySelectorAll('[data-typewriter-navbar]').forEach(function (el) {
         var chars = el.querySelectorAll('.char');
         var tl = gsap.timeline();
@@ -68,16 +76,29 @@
         // stagger so the whole thing finishes within ~0.8s.
         var maxTotalDuration = 0.8;
         var perChar = chars.length ? Math.min(0.02, maxTotalDuration / chars.length) : 0.02;
+        // 'play none none none': once the text has entered the viewport it
+        // always plays through to the end. (It used to be 'play pause resume'.
+        // After a reload mid-page the browser restores the scroll position and
+        // the page height shifts as images load, so a trigger could fire
+        // "enter" then "leave" straight away and freeze the text half-typed,
+        // e.g. "NEXT P".)
         var tl = gsap.timeline({
           scrollTrigger: {
             trigger: el,
             start: 'top bottom',
             end: 'bottom top',
-            toggleActions: 'play pause resume',
+            toggleActions: 'play none none none',
           },
         });
         tl.set(el, { visibility: 'visible' });
         tl.from(chars, { opacity: 0, duration: 0.02, ease: 'none', stagger: { each: perChar } });
+        typewriters.push({ el: el, tl: tl });
+      });
+    } else {
+      // GSAP / SplitType didn't load (blocked CDN, offline): never leave the
+      // text hidden waiting for an animation that will not run.
+      document.querySelectorAll('[data-text-split]').forEach(function (el) {
+        el.style.visibility = 'visible';
       });
     }
 
@@ -132,6 +153,95 @@
       });
     } else {
       revealEls.forEach(revealWhenReady);
+    }
+
+    // Settle pass. After a reload the browser restores the previous scroll
+    // position while the page is still laying out (lazy images have no height
+    // yet, fonts swap), so scroll-triggered state can be computed against the
+    // wrong positions. Re-measure once things have loaded, then make sure
+    // nothing that is on screen (or already scrolled past) is left hidden or
+    // half-animated.
+    var vhNow = function () {
+      return window.innerHeight || document.documentElement.clientHeight;
+    };
+    function settle() {
+      var vh = vhNow();
+      typewriters.forEach(function (t) {
+        if (t.tl.progress() >= 1) return;
+        var r = t.el.getBoundingClientRect();
+        var pos = getComputedStyle(t.el).position;
+        if (r.bottom < 0) {
+          t.tl.progress(1); // already scrolled past: just finish it
+        } else if (r.top < vh || pos === 'fixed' || pos === 'sticky') {
+          t.tl.play(); // on screen: let it type out
+        }
+      });
+      revealEls.forEach(function (el) {
+        if (el.classList.contains('is-visible')) return;
+        if (el.getBoundingClientRect().top < vh * 0.9) {
+          if ('IntersectionObserver' in window && typeof observer !== 'undefined') observer.unobserve(el);
+          revealWhenReady(el);
+        }
+      });
+    }
+    var refreshTimer;
+    function refreshLayout() {
+      clearTimeout(refreshTimer);
+      refreshTimer = setTimeout(function () {
+        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+        settle();
+      }, 150);
+    }
+    // Late-loading images/fonts change the page height: re-measure after each.
+    document.querySelectorAll('img').forEach(function (img) {
+      if (!img.complete) img.addEventListener('load', refreshLayout, { once: true });
+    });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(refreshLayout);
+    window.addEventListener('load', function () {
+      refreshLayout();
+      setTimeout(settle, 800);
+      setTimeout(settle, 2000);
+    });
+    // Back/forward cache restores skip DOMContentLoaded and load entirely.
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) refreshLayout();
+    });
+    // Cheap safety net while scrolling: catches anything the observers missed.
+    var scrollTimer;
+    window.addEventListener(
+      'scroll',
+      function () {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(settle, 200);
+      },
+      { passive: true }
+    );
+
+    // Background videos: make sure they actually play (autoplay can silently
+    // stall after a reload mid-page) and pause when off screen.
+    var videos = document.querySelectorAll('video');
+    if (videos.length) {
+      var playVideo = function (v) {
+        v.muted = true;
+        var p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      };
+      if ('IntersectionObserver' in window) {
+        var videoObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) playVideo(entry.target);
+              else entry.target.pause();
+            });
+          },
+          { threshold: 0.05 }
+        );
+        videos.forEach(function (v) {
+          videoObserver.observe(v);
+        });
+      } else {
+        videos.forEach(playVideo);
+      }
     }
 
     // 4. NYC clock (kept for parity; .timezone is display:none in CSS today)
