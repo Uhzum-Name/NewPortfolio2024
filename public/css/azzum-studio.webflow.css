@@ -6789,20 +6789,3 @@ img[src$="/images/farm.png"] {
   height: auto;
 }
 
-/* About Me: photo sits above the heading, with the same 1.5rem gap the
-   testimonial headshots have to the text below them. */
-.about-intro {
-  flex-flow: column;
-  align-items: flex-start;
-  gap: 1.5rem;
-  width: 100%;
-  display: flex;
-}
-
-.about-intro .aboutmeimage {
-  margin-top: 0;
-}
-
-.about-intro h1 {
-  margin-top: 0;
-}
