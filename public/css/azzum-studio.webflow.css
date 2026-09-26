@@ -6789,3 +6789,43 @@ img[src$="/images/farm.png"] {
   height: auto;
 }
 
+
+/* Floating nav must never sit on top of content.
+   1. Reserve room at the very bottom of every page so the last lines can
+      scroll up clear of the pill (5vh nav offset + pill + breathing room).
+   2. The fixed bar spans the full width; only the pill itself should catch
+      clicks, so text and links underneath stay selectable/clickable.
+   3. While scrolling down the nav slides away, and comes back when scrolling
+      up, at the top, and at the bottom of the page (see site.js). */
+body {
+  padding-bottom: calc(5vh + 4rem);
+}
+
+.topnav {
+  pointer-events: none;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.topnav .div-block-22 {
+  pointer-events: auto;
+}
+
+.topnav.is-hidden {
+  opacity: 0;
+  transform: translateY(calc(100% + 5vh + 2rem));
+}
+
+.topnav.is-hidden .div-block-22 {
+  pointer-events: none;
+}
+
+.topnav:focus-within {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topnav {
+    transition: none;
+  }
+}

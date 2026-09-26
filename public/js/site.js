@@ -244,6 +244,39 @@
       }
     }
 
+    // Floating nav: slide it away while scrolling down so it never covers
+    // text you are reading; bring it back on scroll up, at the top, and at the
+    // very bottom (the page reserves space there, so it covers nothing).
+    var nav = document.querySelector('.topnav');
+    if (nav) {
+      var lastY = window.pageYOffset;
+      var navTicking = false;
+      var updateNav = function () {
+        navTicking = false;
+        var y = window.pageYOffset;
+        var maxY = document.documentElement.scrollHeight - window.innerHeight;
+        var dy = y - lastY;
+        if (y <= 8 || y >= maxY - 4) {
+          nav.classList.remove('is-hidden');
+        } else if (dy > 4) {
+          nav.classList.add('is-hidden');
+        } else if (dy < -4) {
+          nav.classList.remove('is-hidden');
+        }
+        if (Math.abs(dy) > 4) lastY = y;
+      };
+      window.addEventListener(
+        'scroll',
+        function () {
+          if (!navTicking) {
+            navTicking = true;
+            requestAnimationFrame(updateNav);
+          }
+        },
+        { passive: true }
+      );
+    }
+
     // 4. NYC clock (kept for parity; .timezone is display:none in CSS today)
     var timezones = { 'timezone-eua': 'America/New_York' };
     function getFormattedTime(timezone) {
