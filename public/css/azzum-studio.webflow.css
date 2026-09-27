@@ -6902,7 +6902,7 @@ body {
 }
 
 /* Nav icons (Home, LinkedIn). Same cream as the text; the hit area is
-   extended to ~44px with padding + negative margin so the pill keeps its size. */
+   extended to ~50px with padding + negative margin so the pill keeps its size. */
 .nav-icon-link {
   position: relative;
   display: flex;
@@ -6915,32 +6915,42 @@ body {
 }
 
 .nav-icon {
+  position: relative;
   display: block;
   flex: none;
-  width: 18px;
+  width: 22px;
   max-width: none;
-  height: 18px;
+  height: 22px;
 }
 
 .nav-icon-link:hover {
   opacity: .7;
 }
 
-/* Active state: the icon for the page you are on gets a small dot under it. */
-.nav-icon-link[aria-current="page"]::after {
+/* Active state: the icon for the page you are on sits on a soft rounded chip,
+   the same soft-corner language as the icons. It sits behind the icon, so it
+   costs no extra room and the icons can stay large. */
+.nav-icon-link::before {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: 4px;
-  width: 4px;
-  height: 4px;
-  margin-left: -2px;
-  border-radius: 50%;
-  background-color: var(--white);
+  inset: 6px;
+  border-radius: 10px;
+  background-color: rgba(244, 243, 238, .16);
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.nav-icon-link[aria-current="page"]::before {
+  opacity: 1;
 }
 
 .nav-icon-link:focus-visible {
   outline: 1px solid var(--white);
   outline-offset: 2px;
-  border-radius: 8px;
+  border-radius: 10px;
+}
+
+.topnav .div-block-22 {
+  grid-column-gap: 22px;
+  column-gap: 22px;
 }
