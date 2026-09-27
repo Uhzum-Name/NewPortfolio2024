@@ -277,6 +277,16 @@
       );
     }
 
+    // Links to the page you are already on (Home icon / name on the home page)
+    // scroll to the top instead of reloading the page.
+    document.querySelectorAll('a[aria-current="page"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (typeof lenis !== 'undefined') lenis.scrollTo(0);
+        else window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
     // 4. NYC clock (kept for parity; .timezone is display:none in CSS today)
     var timezones = { 'timezone-eua': 'America/New_York' };
     function getFormattedTime(timezone) {

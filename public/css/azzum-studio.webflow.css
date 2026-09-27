@@ -6900,3 +6900,47 @@ body {
   align-self: flex-start;
   width: auto;
 }
+
+/* Nav icons (Home, LinkedIn). Same cream as the text; the hit area is
+   extended to ~44px with padding + negative margin so the pill keeps its size. */
+.nav-icon-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  max-width: none;
+  padding: 14px;
+  margin: -14px;
+}
+
+.nav-icon {
+  display: block;
+  flex: none;
+  width: 18px;
+  max-width: none;
+  height: 18px;
+}
+
+.nav-icon-link:hover {
+  opacity: .7;
+}
+
+/* Active state: the icon for the page you are on gets a small dot under it. */
+.nav-icon-link[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.nav-icon-link:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
