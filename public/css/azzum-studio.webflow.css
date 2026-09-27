@@ -6901,7 +6901,8 @@ body {
   width: auto;
 }
 
-/* Nav icons (Home, LinkedIn). Same cream as the text; the hit area is
+/* Nav icons (Home, LinkedIn). Subtle (dimmed) cream by default, full cream on
+   hover/focus, and always full cream for the page you are on. The hit area is
    extended to ~50px with padding + negative margin so the pill keeps its size. */
 .nav-icon-link {
   position: relative;
@@ -6912,10 +6913,11 @@ body {
   max-width: none;
   padding: 14px;
   margin: -14px;
+  opacity: var(--dim);
+  transition: opacity .2s ease;
 }
 
 .nav-icon {
-  position: relative;
   display: block;
   flex: none;
   width: 22px;
@@ -6923,24 +6925,9 @@ body {
   height: 22px;
 }
 
-.nav-icon-link:hover {
-  opacity: .7;
-}
-
-/* Active state: the icon for the page you are on sits on a soft rounded chip,
-   the same soft-corner language as the icons. It sits behind the icon, so it
-   costs no extra room and the icons can stay large. */
-.nav-icon-link::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border-radius: 10px;
-  background-color: rgba(244, 243, 238, .16);
-  opacity: 0;
-  transition: opacity .2s ease;
-}
-
-.nav-icon-link[aria-current="page"]::before {
+.nav-icon-link:hover,
+.nav-icon-link:focus-visible,
+.nav-icon-link[aria-current="page"] {
   opacity: 1;
 }
 
