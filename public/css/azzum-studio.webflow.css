@@ -214,6 +214,9 @@
   --radius-image: 10px;
   --lh-body: 1.6;
   --dim: .6;
+  /* Reading measure for running text: ~75 characters per line. Set in em so
+     it scales with the font size (the body face averages ~0.41em/character). */
+  --measure: 30em;
   /* Layout is tuned for a 16" MacBook Pro (1728px wide). Above that the
      content stops growing instead of stretching: margins get wider, and
      paragraphs stay a comfortable reading length (~95 characters at 778px). */
@@ -6899,4 +6902,21 @@ body {
 .hero-grid .navbar-label.home {
   align-self: flex-start;
   width: auto;
+}
+
+/* Running text never gets wider than ~75 characters per line, whatever the
+   column it sits in. Narrow columns (phones, the 2-up capabilities grid) are
+   already shorter than this, so it only bites where a column is wide. */
+.body-regular,
+.body-large,
+.w-richtext p {
+  max-width: var(--measure);
+}
+
+/* The pull-quote block is centred in the gallery, so cap the block itself (not
+   just its paragraphs) to keep the text visually centred. Its text is 1rem. */
+@media screen and (min-width: 1280px) {
+  .halfdiv.quote {
+    max-width: min(45%, 30rem);
+  }
 }
