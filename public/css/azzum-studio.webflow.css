@@ -214,6 +214,12 @@
   --radius-image: 10px;
   --lh-body: 1.6;
   --dim: .6;
+  /* Layout is tuned for a 16" MacBook Pro (1728px wide). Above that the
+     content stops growing instead of stretching: margins get wider, and
+     paragraphs stay a comfortable reading length (~95 characters at 778px). */
+  --page-max: 1728px;
+  --text-max: 778px;
+  --hero-media-max: 1210px;
   /* Vertical gap between home-page sections (hero, featured work,
      capabilities, testimonials, about). 172px on desktop, scales down. */
   --section-gap: clamp(6.5rem, 4rem + 8vw, 10.75rem);
@@ -6828,4 +6834,69 @@ body {
   .topnav {
     transition: none;
   }
+}
+
+/* ---------------------------------------------------------------------------
+   Large screens: cap the content instead of letting it spread.
+   Everything below is a no-op at or under 1728px (the widths these caps were
+   measured from) and only changes what happens on wider displays. It also
+   replaces the old >=1920px rules, which switched the layout to 30%-wide
+   columns, made the home page scroll sideways and stretched the CTA button.
+   ------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+  /* Home: the single centred column */
+  .hero-grid,
+  .hero-grid.top,
+  .section-2,
+  .container-projects {
+    width: 45vw;
+    max-width: var(--text-max);
+  }
+
+  /* Case study: header text blocks and the hero image */
+  .halftag-halfdiv,
+  .halftag-halfdiv.bottom {
+    max-width: min(45vw, var(--text-max));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-6 {
+    max-width: min(70vw, var(--hero-media-max));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Case study: full-width sections and the gallery inside them */
+  .projects-4,
+  .section,
+  .next-project {
+    max-width: var(--page-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .collection-list-wrapper .image-3 {
+    max-width: 100%;
+  }
+
+  /* Pull-quote block inside the gallery */
+  .halfdiv.quote {
+    width: 100%;
+    max-width: 45%;
+  }
+
+  /* The name label at the top lines up with the text column */
+  .bottomnav {
+    width: 45vw;
+    max-width: var(--text-max);
+  }
+}
+
+/* The CTA is a button, not a bar: never stretch it across the column. */
+.hero-grid .navbar-label.home {
+  align-self: flex-start;
+  width: auto;
 }
