@@ -6903,7 +6903,9 @@ body {
 
 /* Nav icons (Home, LinkedIn). Subtle (dimmed) cream by default, full cream on
    hover/focus, and always full cream for the page you are on. The hit area is
-   extended to ~50px with padding + negative margin so the pill keeps its size. */
+   extended with padding + negative margin so the pill keeps its size: tall
+   (50px) where there is room, narrow (32px) so neighbouring hit areas never
+   overlap. */
 .nav-icon-link {
   position: relative;
   display: flex;
@@ -6911,8 +6913,8 @@ body {
   justify-content: center;
   color: var(--white);
   max-width: none;
-  padding: 14px;
-  margin: -14px;
+  padding: 14px 5px;
+  margin: -14px -5px;
   opacity: var(--dim);
   transition: opacity .2s ease;
 }
@@ -6937,7 +6939,18 @@ body {
   border-radius: 10px;
 }
 
+/* Spacing is set by what you see, not by the icon boxes: each 16-unit icon
+   canvas has ~2-3px of empty margin around its artwork, so a box-to-box gap
+   looks wider between icons than between an icon and the text. 14px gap and a
+   small pull on the first frame gives ~16px of visible space between every
+   item, and the left padding is trimmed so the artwork sits ~20px from the
+   pill's left edge like the text sits from the right. */
 .topnav .div-block-22 {
-  grid-column-gap: 22px;
-  column-gap: 22px;
+  grid-column-gap: 14px;
+  column-gap: 14px;
+  padding-left: 17px;
+}
+
+.topnav .div-block-22 .frame-68:first-child {
+  margin-right: -3px;
 }
