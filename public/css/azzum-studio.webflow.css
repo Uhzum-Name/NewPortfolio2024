@@ -6948,9 +6948,39 @@ body {
 .topnav .div-block-22 {
   grid-column-gap: 14px;
   column-gap: 14px;
-  padding-left: 17px;
+  padding: 15.5px 15.5px 15.5px 17px;
 }
 
 .topnav .div-block-22 .frame-68:first-child {
   margin-right: -3px;
+}
+
+/* "Book a call" in the nav is the pill's one primary action, so it is a button
+   (same cream fill, dark text, padding and radius as the hero button) rather
+   than a plain link. Padding on the pill is equal on top, bottom and right so
+   the button sits concentrically inside the rounded end. */
+.nav-cta {
+  display: flex;
+  align-items: center;
+  padding: 9px 15px;
+  border-radius: 40px;
+  background-color: var(--white);
+  transition: opacity .2s ease;
+}
+
+.nav-cta .navbar-label {
+  color: var(--black);
+}
+
+.nav-cta:hover {
+  opacity: .85;
+}
+
+.nav-cta .navbar-label:hover {
+  opacity: 1;
+}
+
+.nav-cta:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 2px;
 }
