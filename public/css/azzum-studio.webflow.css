@@ -6904,8 +6904,8 @@ body {
 /* Nav icons (Home, LinkedIn). Subtle (dimmed) cream by default, full cream on
    hover/focus, and always full cream for the page you are on. The hit area is
    extended with padding + negative margin so the pill keeps its size: tall
-   (50px) where there is room, narrow (32px) so neighbouring hit areas never
-   overlap. */
+   (44px, the height of the pill) and narrow (28px) so neighbouring hit
+   areas never overlap. */
 .nav-icon-link {
   position: relative;
   display: flex;
@@ -6913,8 +6913,8 @@ body {
   justify-content: center;
   color: var(--white);
   max-width: none;
-  padding: 14px 5px;
-  margin: -14px -5px;
+  padding: 11px 3px;
+  margin: -11px -3px;
   opacity: var(--dim);
   transition: opacity .2s ease;
 }
@@ -6946,9 +6946,9 @@ body {
    item, and the left padding is trimmed so the artwork sits ~20px from the
    pill's left edge like the text sits from the right. */
 .topnav .div-block-22 {
-  grid-column-gap: 14px;
-  column-gap: 14px;
-  padding: 15.5px 15.5px 15.5px 17px;
+  grid-column-gap: 10px;
+  column-gap: 10px;
+  padding: 9px 9px 9px 11px;
 }
 
 .topnav .div-block-22 .frame-68:first-child {
@@ -6956,13 +6956,13 @@ body {
 }
 
 /* "Book a call" in the nav is the pill's one primary action, so it is a button
-   (same cream fill, dark text, padding and radius as the hero button) rather
-   than a plain link. Padding on the pill is equal on top, bottom and right so
-   the button sits concentrically inside the rounded end. */
+   (cream fill, dark text, fully rounded) rather than a plain link. Padding on
+   the pill is equal on top, bottom and right so the button sits concentrically
+   inside the rounded end. */
 .nav-cta {
   display: flex;
   align-items: center;
-  padding: 9px 15px;
+  padding: 7px 13px;
   border-radius: 40px;
   background-color: var(--white);
   transition: opacity .2s ease;
@@ -6983,4 +6983,40 @@ body {
 .nav-cta:focus-visible {
   outline: 1px solid var(--white);
   outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------------------
+   Liquid glass nav (after Apple's iOS 26 material): a clear, lightly tinted
+   pane that blurs and saturates what is behind it, with a bright specular rim
+   that catches light on the top-left and bottom-right edges, an inner glow,
+   and a soft float shadow.
+   ------------------------------------------------------------------------ */
+.topnav .div-block-22 {
+  position: relative;
+  border-radius: 999px;
+  background-color: rgba(22, 22, 24, .56);
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, .16) 0%, rgba(255, 255, 255, .03) 38%, rgba(255, 255, 255, .02) 62%, rgba(255, 255, 255, .10) 100%);
+  -webkit-backdrop-filter: blur(16px) saturate(170%) brightness(.9);
+  backdrop-filter: blur(16px) saturate(170%) brightness(.9);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, .45),
+    inset 0 -1px 1px rgba(255, 255, 255, .10),
+    inset 0 0 14px rgba(255, 255, 255, .07),
+    0 10px 30px rgba(0, 0, 0, .35),
+    0 2px 8px rgba(0, 0, 0, .25);
+}
+
+/* Gradient hairline rim: bright where the light hits, faint elsewhere. */
+.topnav .div-block-22::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .85), rgba(255, 255, 255, .06) 35%, rgba(255, 255, 255, .06) 65%, rgba(255, 255, 255, .55));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  pointer-events: none;
 }
