@@ -7000,8 +7000,8 @@ body {
   -webkit-backdrop-filter: blur(16px) saturate(170%) brightness(.9);
   backdrop-filter: blur(16px) saturate(170%) brightness(.9);
   box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, .45),
-    inset 0 -1px 1px rgba(255, 255, 255, .10),
+    inset 0 1px 1px rgba(255, 255, 255, .18),
+    inset 0 -1px 1px rgba(255, 255, 255, .06),
     inset 0 0 14px rgba(255, 255, 255, .07),
     0 10px 30px rgba(0, 0, 0, .35),
     0 2px 8px rgba(0, 0, 0, .25);
@@ -7014,7 +7014,7 @@ body {
   inset: 0;
   padding: 1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(255, 255, 255, .85), rgba(255, 255, 255, .06) 35%, rgba(255, 255, 255, .06) 65%, rgba(255, 255, 255, .55));
+  background: linear-gradient(135deg, rgba(255, 255, 255, .34), rgba(255, 255, 255, .04) 35%, rgba(255, 255, 255, .04) 65%, rgba(255, 255, 255, .22));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
