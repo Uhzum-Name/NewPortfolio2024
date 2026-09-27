@@ -6946,8 +6946,8 @@ body {
    item, and the left padding is trimmed so the artwork sits ~20px from the
    pill's left edge like the text sits from the right. */
 .topnav .div-block-22 {
-  grid-column-gap: 10px;
-  column-gap: 10px;
+  grid-column-gap: 13px;
+  column-gap: 13px;
   padding: 9px 9px 9px 11px;
 }
 
