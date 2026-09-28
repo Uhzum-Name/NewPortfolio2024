@@ -6901,7 +6901,7 @@ body {
   width: auto;
 }
 
-/* Nav icons (Home, LinkedIn). Subtle (dimmed) cream by default, full cream on
+/* Nav icons (Home, LinkedIn, Email). Subtle (dimmed) cream by default, full cream on
    hover/focus, and always full cream for the page you are on. The hit area is
    extended with padding + negative margin so the pill keeps its size: tall
    (44px, the height of the pill) and narrow (28px) so neighbouring hit
