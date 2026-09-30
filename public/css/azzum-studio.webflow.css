@@ -7098,8 +7098,11 @@ body {
   pointer-events: none;
 }
 
-/* No room in the margin once the layout drops to a single column. */
-@media (max-width: 1024px) {
+/* Case study body copy stacks to a single column with an 80px gutter below
+   1280px (the same breakpoint the rest of this template splits at) -- not
+   enough room for a 200px rail without overlapping the text. Match that
+   breakpoint exactly rather than an arbitrary one. */
+@media (max-width: 1279px) {
   .case-toc {
     display: none;
   }
