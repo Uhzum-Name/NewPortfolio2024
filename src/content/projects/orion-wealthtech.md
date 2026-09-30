@@ -1,11 +1,12 @@
 ---
-pageTitle: "Orion – Simplifying Complexity Through Scalable UX"
-metaDescription: "Redesigned Orion Wealthtech's digital platform to reflect its innovative solutions, combining clean UI, intuitive navigation, and a flexible design system to clarify complex financial technology for a broader audience."
+pageTitle: "Orion: Wealthtech UX & Design System | Azzum Naeem"
+metaDescription: "Redesigned Orion Wealthtech's platform with clean UI and a flexible design system, clarifying complex financial technology for a broader audience."
 label: "orion"
 tagline: "Designing a Digital Platform for a Next-Gen Wealth Management Brand"
 services: |
   UX Strategy · ui design · <strong>Design Systems Development</strong>
 heroImage: "/images/ipad-thumb.png"
+ogImage: "/images/ipad-thumb.png"
 heroImageAlt: ""
 overview: |
   <p class="h6-regular">Project Overview</p>

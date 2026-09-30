@@ -12,10 +12,18 @@ export interface Props {
 const {
   title,
   description,
-  ogImage = 'https://cdn.prod.website-files.com/6659888a1845a6ee299bdaa6/68e4110855d244b0b7f56545_openg.png',
+  // Site-relative by default (e.g. "/images/main-image.png"); resolved to an
+  // absolute URL below via `new URL(...)` since og:image/twitter:image must
+  // be absolute for crawlers to fetch them. Falls back to Paymaster's hero
+  // image -- only the home page actually uses this default; every case
+  // study passes its own hero image as `ogImage`.
+  ogImage = '/images/main-image.png',
   bodyClass = 'body-2',
   isHome = false,
 } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const absoluteOgImage = new URL(ogImage, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -24,13 +32,18 @@ const {
     <meta charset="utf-8" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:site_name" content="Azzum Naeem" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={absoluteOgImage} />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteOgImage} />
+    <meta name="theme-color" content="#000000" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href={`/css/normalize.css?v=${assetVersion}`} rel="stylesheet" />

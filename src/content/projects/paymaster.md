@@ -1,5 +1,5 @@
 ---
-pageTitle: "Paymaster"
+pageTitle: "Paymaster: Fintech App Design | Azzum Naeem"
 metaDescription: "Paymaster is a fintech app that makes paying off credit card debt exciting and fun. Product design, behavioral UX, and AI-driven visuals case study."
 label: "Paymaster"
 tagline: "End-to-end product design for a gamified fintech app that raised $7.8M in seed funding."
@@ -11,6 +11,7 @@ tags:
   - "UX Architecture"
 heroImage: "/images/main-image.png"
 heroImageAlt: ""
+ogImage: "/images/main-image.png"
 overview: |
   <p class="h6-regular">Project Overview</p>
   <p><em>*To respect client confidentiality and non-disclosure, certain features, names, and details have been modified and/or omitted from this case study.*</em></p>

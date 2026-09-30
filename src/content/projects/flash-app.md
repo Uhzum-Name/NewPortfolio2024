@@ -1,6 +1,6 @@
 ---
-pageTitle: "Fläsh – Designing a Multi-Touchpoint AR Experience for a Global Dental Brand"
-metaDescription: "Designed a multi-touchpoint AR experience for Fläsh, helping dental clinics boost whitening bookings and social engagement. Explore how responsive UX and a scalable design system drove real-world impact."
+pageTitle: "Fläsh: AR Product Design | Azzum Naeem"
+metaDescription: "An AR experience for Fläsh that helped dental clinics boost whitening bookings and social engagement, built on responsive UX and a scalable design system."
 label: "Fläsh"
 tagline: "Designing a Multi-Touchpoint AR Experience for a Global Dental Brand"
 services: |
@@ -10,6 +10,7 @@ tags:
   - "Web Application"
   - "Interactive Prototyping"
 heroImage: "/images/home.png"
+ogImage: "/images/home.png"
 heroImageAlt: ""
 overview: |
   <p class="h6-regular">Project Overview</p>

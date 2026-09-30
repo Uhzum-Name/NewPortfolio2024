@@ -1,6 +1,6 @@
 ---
-pageTitle: "Gardaworld"
-metaDescription: "Redesigning GardaWorld's global platform to unify brand, scale design, and guide diverse users across security, staffing, and technology. See how a modular design system improved engagement, reduced dev time, and future-proofed their digital presence."
+pageTitle: "Gardaworld: Design System & Web Platform | Azzum Naeem"
+metaDescription: "GardaWorld needed one platform to unify its brand while letting sub-brands stand apart. A modular design system cut dev time and scaled with the business."
 label: "gardaworld"
 tagline: "Web platform, design system, and brand architecture for a $4B global security company across 3 markets."
 services: |
@@ -10,6 +10,7 @@ tags:
   - "Marketing Platform"
   - "Design Systems"
 heroImage: "/images/Frame-23s6.png"
+ogImage: "/images/Frame-23s6.png"
 heroImageAlt: ""
 overview: |
   <p class="h6-regular">Project Overview</p>
