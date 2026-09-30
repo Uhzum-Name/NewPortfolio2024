@@ -164,6 +164,11 @@
     var vhNow = function () {
       return window.innerHeight || document.documentElement.clientHeight;
     };
+    // Forward-declared: assigned further down if this page has a .case-toc
+    // (case study pages only). settle() re-runs it so the rail's visibility
+    // and active section are correct even if late-loading images/fonts
+    // shifted the layout after the first pass.
+    var updateToc;
     function settle() {
       var vh = vhNow();
       typewriters.forEach(function (t) {
@@ -183,6 +188,7 @@
           revealWhenReady(el);
         }
       });
+      if (updateToc) updateToc();
     }
     var refreshTimer;
     function refreshLayout() {
@@ -287,7 +293,78 @@
       });
     });
 
-    // 4. NYC clock (kept for parity; .timezone is display:none in CSS today)
+    // 4. Case-study side nav: auto-build a table of contents from the
+    // h6-regular section headlines, link each to its heading, fade the rail
+    // in once the hero has scrolled past and out again near the
+    // next-project footer, and keep the current section at full brightness
+    // as you scroll (like the current page does in the top nav).
+    var tocNav = document.querySelector('.case-toc');
+    if (tocNav) {
+      var headingEls = document.querySelectorAll(
+        '.projects-4 .body-regular.w-richtext .h6-regular, .collection-list-wrapper .h6-regular'
+      );
+      var tocSections = [];
+      headingEls.forEach(function (el, i) {
+        var text = (el.textContent || '').trim();
+        if (!text) return;
+        if (!el.id) {
+          var slug = text
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+          el.id = 'toc-' + (slug || i);
+        }
+        var link = document.createElement('a');
+        link.href = '#' + el.id;
+        link.textContent = text;
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (typeof lenis !== 'undefined') lenis.scrollTo(el, { offset: -32 });
+          else el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', '#' + el.id);
+        });
+        tocNav.appendChild(link);
+        tocSections.push({ el: el, link: link });
+      });
+
+      if (tocSections.length) {
+        var tocHero = document.querySelector('.hero-6');
+        var tocFooter = document.querySelector('.next-project');
+        var tocTicking = false;
+        updateToc = function () {
+          tocTicking = false;
+          var vh = window.innerHeight;
+
+          var pastHero = !tocHero || tocHero.getBoundingClientRect().bottom < vh * 0.5;
+          var reachedFooter = tocFooter && tocFooter.getBoundingClientRect().top < vh * 0.75;
+          tocNav.classList.toggle('is-visible', pastHero && !reachedFooter);
+
+          var line = vh * 0.35;
+          var current = tocSections[0];
+          for (var i = 0; i < tocSections.length; i++) {
+            if (tocSections[i].el.getBoundingClientRect().top - line <= 0) current = tocSections[i];
+            else break;
+          }
+          tocSections.forEach(function (s) {
+            s.link.classList.toggle('is-active', s === current);
+          });
+        };
+        window.addEventListener(
+          'scroll',
+          function () {
+            if (!tocTicking) {
+              tocTicking = true;
+              requestAnimationFrame(updateToc);
+            }
+          },
+          { passive: true }
+        );
+        window.addEventListener('resize', updateToc);
+        updateToc();
+      }
+    }
+
+    // 5. NYC clock (kept for parity; .timezone is display:none in CSS today)
     var timezones = { 'timezone-eua': 'America/New_York' };
     function getFormattedTime(timezone) {
       var date = new Date();

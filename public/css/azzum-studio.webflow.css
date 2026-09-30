@@ -6989,9 +6989,11 @@ body {
    Liquid glass nav (after Apple's iOS 26 material): a clear, lightly tinted
    pane that blurs and saturates what is behind it, with a bright specular rim
    that catches light on the top-left and bottom-right edges, an inner glow,
-   and a soft float shadow.
+   and a soft float shadow. Shared by the floating bottom nav and the case
+   study side nav (.case-toc) so both read as the same material.
    ------------------------------------------------------------------------ */
-.topnav .div-block-22 {
+.topnav .div-block-22,
+.case-toc {
   position: relative;
   border-radius: 999px;
   background-color: rgba(22, 22, 24, .56);
@@ -7008,7 +7010,8 @@ body {
 }
 
 /* Gradient hairline rim: bright where the light hits, faint elsewhere. */
-.topnav .div-block-22::before {
+.topnav .div-block-22::before,
+.case-toc::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -7019,4 +7022,67 @@ body {
   -webkit-mask-composite: xor;
   mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
   pointer-events: none;
+}
+
+/* Case-study side nav: an auto-built table of contents (see site.js) that
+   links to each section's h6-regular headline. Left edge, vertically
+   centered; hidden until the hero has scrolled past and hidden again near
+   the next-project footer. Links use the same dim/full-brightness states as
+   the nav icons, and the current section reads the same way the current
+   page does there (no dot or marker, just brightness). */
+.case-toc {
+  position: fixed;
+  left: clamp(20px, 2.5vw, 48px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 200px;
+  padding: 18px 20px;
+  /* A vertical list needs a tamer radius than the short, wide nav pill --
+     999px here would round the whole height into a giant capsule. */
+  border-radius: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s ease;
+}
+
+.case-toc.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.case-toc a {
+  display: block;
+  color: var(--white);
+  opacity: var(--dim);
+  font-family: Ppfraktionmono, sans-serif;
+  font-size: .6875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: opacity .2s ease;
+}
+
+.case-toc a:hover,
+.case-toc a:focus-visible,
+.case-toc a.is-active {
+  opacity: 1;
+}
+
+.case-toc a:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* No room in the margin once the layout drops to a single column. */
+@media (max-width: 1024px) {
+  .case-toc {
+    display: none;
+  }
 }

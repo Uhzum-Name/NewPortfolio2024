@@ -12,6 +12,17 @@ const p = entry.data;
 ---
 
 <Layout title={p.pageTitle} description={p.metaDescription} ogImage={p.ogImage} bodyClass="body-2">
+  {
+    /*
+      Auto-built table of contents (see /js/site.js): it finds every
+      h6-regular section headline in this page, links to it, and tracks
+      scroll position for the active state. Gated to Paymaster for now while
+      we dial in the design; drop the slug check to roll out to every case
+      study.
+    */
+  }
+  {entry.slug === 'paymaster' && <nav class="case-toc" aria-label="Case study sections"></nav>}
+
   <section class="hero-6">
     <img class="main-project-image" src={p.heroImage} alt={p.heroImageAlt} sizes="(max-width: 1919px) 100vw, 1920px" loading="lazy" data-reveal="blur" />
   </section>
