@@ -330,6 +330,11 @@
       if (tocSections.length) {
         var tocHero = document.querySelector('.hero-6');
         var tocFooter = document.querySelector('.next-project');
+        // Sliding indicator: a thin line that glides to sit beside the
+        // active link (see the .case-toc-indicator rule in the CSS).
+        var tocIndicator = document.createElement('span');
+        tocIndicator.className = 'case-toc-indicator';
+        tocNav.appendChild(tocIndicator);
         var tocTicking = false;
         updateToc = function () {
           tocTicking = false;
@@ -348,6 +353,8 @@
           tocSections.forEach(function (s) {
             s.link.classList.toggle('is-active', s === current);
           });
+          tocIndicator.style.transform = 'translateY(' + current.link.offsetTop + 'px)';
+          tocIndicator.style.height = current.link.offsetHeight + 'px';
         };
         window.addEventListener(
           'scroll',
