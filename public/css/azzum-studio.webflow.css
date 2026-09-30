@@ -7043,10 +7043,10 @@ body {
   padding: 18px 20px;
   /* A vertical list needs a tamer radius than the short, wide nav pill --
      999px here would round the whole height into a giant capsule. */
-  border-radius: 28px;
+  border-radius: 14px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .4s ease;
+  transition: opacity .18s ease;
 }
 
 .case-toc.is-visible {
